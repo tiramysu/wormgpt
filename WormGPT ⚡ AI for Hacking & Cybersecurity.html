@@ -1,0 +1,4716 @@
+<!DOCTYPE html>
+<html lang="en" class="xsbafpbj idc0_343"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>WormGPT ⚡ AI for Hacking &amp; Cybersecurity</title>
+    <meta name="keywords" content="WormGPT, AI hacking, ethical hacking AI, cybersecurity AI, pentesting AI, exploit detection, security automation, AI for hackers, cyber research tool, red teaming AI, vulnerability scanning">
+    <meta name="description" content="WormGPT – Next-gen AI for cybersecurity professionals, ethical hackers, and penetration testers. Automate security research, vulnerability analysis, and exploit detection with cutting-edge AI.">
+   
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light only">
+    <meta name="description" content="Desc">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/images/card.jpg?v=9c5978d2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    
+
+    <!-- link href="./css/bootstrap.min.css" rel="stylesheet" -->
+
+<!-- CSS -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const pricesInUSD = {
+    price1: 120,
+    price2: 499,
+    price3: 189,
+    price4: 249,
+    price5: 749,
+    price6: 349,
+    price7: 289,
+    price8: 289,
+    price9: 1899,
+    price10: 499,
+    price11: 499
+  };
+
+  function fetchBTCPrice() {
+    fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+      .then(response => response.json())
+      .then(data => {
+        if (data.bitcoin && data.bitcoin.usd) {
+          const btcRate = data.bitcoin.usd;
+
+          // Convert each USD price to BTC and update the respective span
+          for (let id in pricesInUSD) {
+            const btcAmount = (pricesInUSD[id] / btcRate).toFixed(8); // 8 decimal places
+            const priceElement = document.getElementById(id);
+            if (priceElement) {
+              priceElement.textContent = `${btcAmount} BTC`;
+            }
+          }
+        } else {
+          console.error("Error fetching BTC price");
+        }
+      })
+      .catch(error => {
+        console.error("Error fetching BTC price:", error);
+      });
+  }
+
+  fetchBTCPrice(); // Fetch BTC prices on page load
+});
+
+</script>
+
+<style>
+  .image-grid {
+    margin-left: 10%;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two equal columns */
+      gap: 10px; /* Space between images */
+      max-width: 600px; /* Adjust width as needed */
+   }
+
+  .image-grid img {
+      width: 60%; /* Make images responsive */
+      height: auto;
+      display: block;
+      border-radius: 6px; /* Optional: Rounded corners */
+  }
+</style>
+
+<style>
+
+@keyframes rainbowText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-text {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #2bdfe8, #e81818, #5ef26e, #006e80, #7b7bff, #46f9df, violet);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 3s infinite linear;
+}
+
+
+ /* Hide modal initially */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000; /* Ensure it appears on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* Dim background */
+  padding-top: 60px;
+}
+
+/* Modal content (centered) */
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+  top: -96px;
+
+}
+
+/* Close button (top-right corner) */
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+/* Button styling */
+.button-group {
+  margin-top: 20px;
+}
+
+.cancel-purchase, .confirm-purchase {
+  padding: 10px 36px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cancel-purchase {
+  background-color: #ccc;
+  color: black;
+}
+
+.cancel-purchase:hover {
+  background-color: #bbb;
+}
+
+.confirm-purchase {
+  background-color: #28a745;
+  color: white;
+}
+
+.confirm-purchase:hover {
+  background-color: #218838;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+  </style>
+  
+  
+  
+ 
+     <style>
+      /* NEW */
+      .custom-div {
+        border-radius: 15px;
+        background-color: rgb(214, 101, 101);
+        color: rgb(239, 239, 239);
+        padding: 15px 30px;
+        text-align: left;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        max-width: 860px;
+      }
+
+      table {border-collapse: collapse;}
+      .prices td {
+        /* border-bottom: 1px solid rgb(239, 239, 239); */
+        padding: 5px 30px
+      }
+
+      .buy-btn {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        background-color: #4caf4f;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .custom-div li {
+        list-style: initial;
+        /* Add margin or padding if necessary */
+        /* For example: */
+        margin-left: 20px;
+        line-height: 1.2em;
+      }
+
+      .custom-div b {font-weight: bold;}
+      .custom-div p {
+          /* Reset all paragraph styles to default */
+          all: unset;
+          margin: 1em 0; 
+          display: block;
+          line-height: 1.2em;
+      }
+
+      /* OTHER */
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      body {
+        -webkit-text-size-adjust: none;
+      }
+      mark {
+        background-color: transparent;
+        color: inherit;
+      }
+      input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+      body {
+        line-height: 1;
+        min-height: var(--viewport-height);
+        min-width: 320px;
+        overflow-x: hidden;
+        word-wrap: break-word;
+      }
+      body:before {
+        content: "";
+        display: block;
+        background-attachment: scroll;
+        height: var(--background-height);
+        left: 0;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        transform: scale(1);
+        width: 100vw;
+        z-index: 0;
+        background-image: linear-gradient(
+            to top,
+            rgba(21, 20, 28, 0.871),
+            rgba(21, 20, 28, 0.871)
+          ),
+          url("assets/images/bg.svg?v=9c5978d2");
+        background-position: 0% 0%, center;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+        background-color: #15141c;
+      }
+      body:after {
+        background-color: #15141c;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        transform: scale(1);
+        transition: opacity 1s ease-in-out 0s, visibility 1s 0s;
+        visibility: hidden;
+        width: 100%;
+        z-index: 1;
+      }
+      body.is-loading:after {
+        opacity: 1;
+        visibility: visible;
+      }
+      :root {
+        --background-height: 100vh;
+        --site-language-alignment: left;
+        --site-language-direction: ltr;
+        --site-language-flex-alignment: flex-start;
+        --site-language-indent-left: 1;
+        --site-language-indent-right: 0;
+        --viewport-height: 100vh;
+      }
+      html {
+        font-size: 18pt;
+      }
+      u {
+        text-decoration: underline;
+      }
+      strong {
+        color: inherit;
+        font-weight: bolder;
+      }
+      em {
+        font-style: italic;
+      }
+      code {
+        background-color: rgba(144, 144, 144, 0.25);
+        border-radius: 0.25em;
+        font-family: "Lucida Console", "Courier New", monospace;
+        font-size: 0.9em;
+        font-weight: normal;
+        letter-spacing: 0;
+        margin: 0 0.25em;
+        padding: 0.25em 0.5em;
+        text-indent: 0;
+      }
+      mark {
+        background-color: rgba(144, 144, 144, 0.25);
+      }
+      spoiler-text {
+        -webkit-text-stroke: 0;
+        background-color: rgba(32, 32, 32, 0.75);
+        text-shadow: none;
+        text-stroke: 0;
+        color: transparent;
+        cursor: pointer;
+        transition: color 0.1s ease-in-out;
+      }
+      spoiler-text.active {
+        color: #ffffff;
+        cursor: text;
+      }
+      s {
+        text-decoration: line-through;
+      }
+      sub {
+        font-size: smaller;
+        vertical-align: sub;
+      }
+      sup {
+        font-size: smaller;
+        vertical-align: super;
+      }
+      a {
+        color: inherit;
+        text-decoration: underline;
+        transition: color 0.25s ease;
+      }
+      a[onclick]:not([href]) {
+        cursor: pointer;
+      }
+      #wrapper {
+        -webkit-overflow-scrolling: touch;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: var(--viewport-height);
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+      }
+      #main {
+        --alignment: center;
+        --flex-alignment: center;
+        --indent-left: 1;
+        --indent-right: 1;
+        --border-radius-tl: 0;
+        --border-radius-tr: 0;
+        --border-radius-br: 0;
+        --border-radius-bl: 0;
+        align-items: center;
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: center;
+        max-width: 100%;
+        position: relative;
+        text-align: var(--alignment);
+        z-index: 1;
+      }
+      #main > .inner {
+        --padding-horizontal: 3rem;
+        --padding-vertical: 6rem;
+        --spacing: 6rem;
+        --width: 60rem;
+        border-radius: var(--border-radius-tl) var(--border-radius-tr)
+          var(--border-radius-br) var(--border-radius-bl);
+        max-width: 100%;
+        position: relative;
+        width: var(--width);
+        z-index: 1;
+        padding: var(--padding-vertical) var(--padding-horizontal);
+      }
+      #main > .inner > * {
+        margin-top: var(--spacing);
+        margin-bottom: var(--spacing);
+      }
+      #main > .inner > :first-child {
+        margin-top: 0 !important;
+      }
+      #main > .inner > :last-child {
+        margin-bottom: 0 !important;
+      }
+      #main > .inner > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        max-width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
+        width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
+      }
+      #main > .inner > .full:first-child {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+      }
+      #main > .inner > .full:last-child {
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+      }
+      #main > .inner > .full.screen {
+        border-radius: 0 !important;
+        max-width: 100vw;
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        margin-left: -50vw;
+        right: auto;
+      }
+      body.is-instant #main,
+      body.is-instant #main > .inner > *,
+      body.is-instant #main > .inner > section > * {
+        transition: none !important;
+      }
+      body.is-instant:after {
+        display: none !important;
+        transition: none !important;
+      }
+      .image {
+        display: block;
+        line-height: 0;
+        max-width: 100%;
+        position: relative;
+      }
+      .image .frame {
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        vertical-align: top;
+        width: 100%;
+      }
+      .image .frame img {
+        border-radius: 0 !important;
+        max-width: 100%;
+        vertical-align: top;
+        width: inherit;
+      }
+      .image.full .frame {
+        display: block;
+      }
+      .image.full:first-child .frame {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      .image.full:last-child .frame {
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+      #image02 .frame {
+        width: 6rem;
+        transition: none;
+      }
+      #image02 .frame img {
+        transition: none;
+      }
+      .image.style1 .frame {
+        width: 6rem;
+        border-radius: 100%;
+        border-color: rgba(255, 255, 255, 0.388);
+        border-style: solid;
+        border-width: 1px;
+        transition: none;
+      }
+      .image.style1 img {
+        border-radius: inherit !important;
+        padding: 0.625rem;
+      }
+      .image.style1 .frame img {
+        transition: none;
+      }
+      .image.style2 .frame {
+        width: 53.5rem;
+        height: 24.25rem;
+        border-radius: 1.5rem;
+        border-color: rgba(255, 255, 255, 0.388);
+        border-style: solid;
+        border-width: 1px;
+        transition: none;
+      }
+      .image.style2 .frame img:first-child {
+        border-radius: calc(1.5rem - 1px) !important;
+      }
+      .image.style2 img {
+        height: 100% !important;
+        object-fit: cover;
+        object-position: center;
+        width: 100% !important;
+        border-radius: inherit !important;
+        padding: 0.625rem;
+      }
+      .image.style2 .frame img {
+        transition: none;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        direction: var(--site-language-direction);
+        position: relative;
+      }
+      h1 span.p,
+      h2 span.p,
+      h3 span.p,
+      p span.p {
+        display: block;
+        position: relative;
+      }
+      h1 span[style],
+      h2 span[style],
+      h3 span[style],
+      p span[style],
+      h1 strong,
+      h2 strong,
+      h3 strong,
+      p strong,
+      h1 a,
+      h2 a,
+      h3 a,
+      p a,
+      h1 code,
+      h2 code,
+      h3 code,
+      p code,
+      h1 mark,
+      h2 mark,
+      h3 mark,
+      p mark,
+      h1 spoiler-text,
+      h2 spoiler-text,
+      h3 spoiler-text,
+      p spoiler-text {
+        -webkit-text-fill-color: currentcolor;
+      }
+      h1.style3,
+      h2.style3,
+      h3.style3,
+      p.style3 {
+        color: #ffffff;
+        font-family: "Sora", sans-serif;
+        font-size: 3.625em;
+        line-height: 1.25;
+        font-weight: 700;
+      }
+      h1.style3 mark,
+      h2.style3 mark,
+      h3.style3 mark,
+      p.style3 mark {
+        background-color: transparent;
+      }
+      h1.style3 a,
+      h2.style3 a,
+      h3.style3 a,
+      p.style3 a {
+        text-decoration: none;
+      }
+      h1.style3 a:hover,
+      h2.style3 a:hover,
+      h3.style3 a:hover,
+      p.style3 a:hover {
+        text-decoration: underline;
+      }
+      h1.style3 span.p:nth-child(n + 2),
+      h2.style3 span.p:nth-child(n + 2),
+      h3.style3 span.p:nth-child(n + 2),
+      p.style3 span.p:nth-child(n + 2) {
+        margin-top: 1rem;
+      }
+      h1.style1,
+      h2.style1,
+      h3.style1,
+      p.style1 {
+        color: rgba(255, 255, 255, 0.659);
+        font-family: "Inter", sans-serif;
+        font-size: 1em;
+        line-height: 2;
+        font-weight: 300;
+      }
+      h1.style1 mark,
+      h2.style1 mark,
+      h3.style1 mark,
+      p.style1 mark {
+        color: #ffffff;
+        background-color: transparent;
+      }
+      h1.style1 a,
+      h2.style1 a,
+      h3.style1 a,
+      p.style1 a {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+      h1.style1 a:hover,
+      h2.style1 a:hover,
+      h3.style1 a:hover,
+      p.style1 a:hover {
+        color: #6a00ff;
+      }
+      h1.style1 span.p:nth-child(n + 2),
+      h2.style1 span.p:nth-child(n + 2),
+      h3.style1 span.p:nth-child(n + 2),
+      p.style1 span.p:nth-child(n + 2) {
+        margin-top: 1rem;
+      }
+      h1.style2,
+      h2.style2,
+      h3.style2,
+      p.style2 {
+        color: #ffffff;
+        font-family: "Sora", sans-serif;
+        letter-spacing: 0.025rem;
+        width: calc(100% + 0.025rem);
+        font-size: 1.5em;
+        line-height: 1.75;
+        font-weight: 400;
+      }
+      h1.style2 mark,
+      h2.style2 mark,
+      h3.style2 mark,
+      p.style2 mark {
+        background-color: transparent;
+      }
+      h1.style2 a:hover,
+      h2.style2 a:hover,
+      h3.style2 a:hover,
+      p.style2 a:hover {
+        color: #6a00ff;
+      }
+      h1.style2 a,
+      h2.style2 a,
+      h3.style2 a,
+      p.style2 a {
+        text-decoration: underline;
+      }
+      h1.style2 span.p:nth-child(n + 2),
+      h2.style2 span.p:nth-child(n + 2),
+      h3.style2 span.p:nth-child(n + 2),
+      p.style2 span.p:nth-child(n + 2) {
+        margin-top: 1rem;
+      }
+      h1.style4,
+      h2.style4,
+      h3.style4,
+      p.style4 {
+        color: #ffffff;
+        font-family: "Sora", sans-serif;
+        font-size: 3.375em;
+        line-height: 1;
+        font-weight: 400;
+      }
+      h1.style4 mark,
+      h2.style4 mark,
+      h3.style4 mark,
+      p.style4 mark {
+        background-color: transparent;
+      }
+      h1.style4 a:hover,
+      h2.style4 a:hover,
+      h3.style4 a:hover,
+      p.style4 a:hover {
+        color: #6a00ff;
+      }
+      h1.style4 a,
+      h2.style4 a,
+      h3.style4 a,
+      p.style4 a {
+        text-decoration: underline;
+      }
+      h1.style4 span.p:nth-child(n + 2),
+      h2.style4 span.p:nth-child(n + 2),
+      h3.style4 span.p:nth-child(n + 2),
+      p.style4 span.p:nth-child(n + 2) {
+        margin-top: 1rem;
+      }
+      h1.style5,
+      h2.style5,
+      h3.style5,
+      p.style5 {
+        color: #ffffff;
+        font-family: "Sora", sans-serif;
+        font-size: 3.375em;
+        line-height: 1;
+        font-weight: 700;
+      }
+      h1.style5 mark,
+      h2.style5 mark,
+      h3.style5 mark,
+      p.style5 mark {
+        background-color: transparent;
+      }
+      h1.style5 a:hover,
+      h2.style5 a:hover,
+      h3.style5 a:hover,
+      p.style5 a:hover {
+        color: #6a00ff;
+      }
+      h1.style5 a,
+      h2.style5 a,
+      h3.style5 a,
+      p.style5 a {
+        text-decoration: underline;
+      }
+      h1.style5 span.p:nth-child(n + 2),
+      h2.style5 span.p:nth-child(n + 2),
+      h3.style5 span.p:nth-child(n + 2),
+      p.style5 span.p:nth-child(n + 2) {
+        margin-top: 1rem;
+      }
+      h1.style6,
+      h2.style6,
+      h3.style6,
+      p.style6 {
+        color: rgba(255, 255, 255, 0.259);
+        font-family: "Inter", sans-serif;
+        font-size: 1em;
+        line-height: 2;
+        font-weight: 300;
+      }
+      h1.style6 mark,
+      h2.style6 mark,
+      h3.style6 mark,
+      p.style6 mark {
+        color: #ffffff;
+        background-color: transparent;
+      }
+      h1.style6 a,
+      h2.style6 a,
+      h3.style6 a,
+      p.style6 a {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+      h1.style6 a:hover,
+      h2.style6 a:hover,
+      h3.style6 a:hover,
+      p.style6 a:hover {
+        color: #6a00ff;
+      }
+      h1.style6 span.p:nth-child(n + 2),
+      h2.style6 span.p:nth-child(n + 2),
+      h3.style6 span.p:nth-child(n + 2),
+      p.style6 span.p:nth-child(n + 2) {
+        margin-top: 1rem;
+      }
+      .buttons {
+        cursor: default;
+        display: flex;
+        justify-content: var(--flex-alignment);
+        letter-spacing: 0;
+        padding: 0;
+      }
+      .buttons li {
+        max-width: 100%;
+      }
+      .buttons li a {
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        white-space: nowrap;
+      }
+      .buttons.style2 {
+        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .buttons.style2 li a {
+        display: inline-flex;
+        width: auto;
+        height: 3.75rem;
+        line-height: 3.75rem;
+        padding: 0 1.875rem;
+        vertical-align: middle;
+        font-family: "Inter", sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+        border-radius: 2rem;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        transition: transform 0.25s ease, color 0.25s ease,
+          background-color 0.25s ease, border-color 0.25s ease;
+      }
+      .buttons.style2 li a svg {
+        display: block;
+        fill: #ffffff;
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 100%;
+        min-width: 16px;
+        width: 1.125em;
+        margin-left: 0.5em;
+        margin-right: calc(-0.125em + 0rem);
+        transition: fill 0.25s ease;
+      }
+      .buttons.style2 li a .label {
+        direction: var(--site-language-direction);
+        overflow: hidden;
+        flex-grow: 1;
+        flex-shrink: 1;
+        text-align: left;
+        width: 100%;
+      }
+      .buttons.style2 .button {
+        background-color: #f00;
+  color: #ffffff;
+  background-image: linear-gradient( 209deg, #2b45d6 0%, rgba(255, 84, 115, 0.008) 100% );
+ 
+  background-position: 0% 0%;
+        background-repeat: repeat;
+        background-size: cover;
+      }
+      .buttons.style2 li a:hover {
+        transform: scale(1.0775);
+      }
+      .buttons.style1 {
+        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .buttons.style1 li a {
+        display: inline-flex;
+        width: 30rem;
+        height: 3.75rem;
+        line-height: 3.75rem;
+        padding: 0 1.875rem;
+        vertical-align: middle;
+        font-family: "Inter", sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+        border-radius: 2rem;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        transition: transform 0.25s ease, color 0.25s ease,
+          background-color 0.25s ease, border-color 0.25s ease;
+      }
+      .buttons.style1 li a svg {
+        display: block;
+        fill: #ffffff;
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 100%;
+        min-width: 16px;
+        width: 1.125em;
+        margin-left: 0.5em;
+        margin-right: calc(-0.125em + 0rem);
+        transition: fill 0.25s ease;
+      }
+      .buttons.style1 li a .label {
+        direction: var(--site-language-direction);
+        overflow: hidden;
+        flex-grow: 1;
+        flex-shrink: 1;
+        text-align: left;
+        width: 100%;
+      }
+      .buttons.style1 .button {
+        color: #ffffff;
+        border: solid 1px rgba(255, 255, 255, 0.388);
+      }
+      .buttons.style1 li a:hover {
+        transform: scale(1.0775);
+      }
+      .buttons.style3 {
+        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .buttons.style3 li a {
+        display: inline-flex;
+        width: 30rem;
+        height: 3.75rem;
+        line-height: 3.75rem;
+        padding: 0 1.875rem;
+        vertical-align: middle;
+        font-family: "Inter", sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+        border-radius: 2rem;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        transition: transform 0.25s ease, color 0.25s ease,
+          background-color 0.25s ease, border-color 0.25s ease;
+      }
+      .buttons.style3 li a svg {
+        display: block;
+        fill: #ec6a58;
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 100%;
+        min-width: 16px;
+        width: 1.125em;
+        margin-left: 0.5em;
+        margin-right: calc(-0.125em + 0rem);
+        transition: fill 0.25s ease;
+      }
+      .buttons.style3 li a .label {
+        direction: var(--site-language-direction);
+        overflow: hidden;
+        flex-grow: 1;
+        flex-shrink: 1;
+        text-align: left;
+        width: 100%;
+      }
+      .buttons.style3 .button {
+        background-color: #ffffff;
+        color: #ec6a58;
+      }
+      .buttons.style3 li a:hover {
+        transform: scale(1.0775);
+      }
+      .container {
+        position: relative;
+      }
+      .container > .wrapper {
+        vertical-align: top;
+        position: relative;
+        max-width: 100%;
+        border-radius: inherit;
+      }
+      .container > .wrapper > .inner {
+        vertical-align: top;
+        position: relative;
+        max-width: 100%;
+        border-radius: inherit;
+        text-align: var(--alignment);
+      }
+      #main .container.full:first-child > .wrapper {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #main .container.full:last-child > .wrapper {
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+      #main .container.full:first-child > .wrapper > .inner {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #main .container.full:last-child > .wrapper > .inner {
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+      #container03 {
+        display: flex;
+        width: 100%;
+        min-height: 35rem;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+      }
+      #container03 > .wrapper > .inner {
+        --gutters: 9rem;
+        --padding-horizontal: 0rem;
+        --padding-vertical: 0rem;
+        --spacing: 1.5rem;
+        padding: var(--padding-vertical) var(--padding-horizontal);
+      }
+      #container03 > .wrapper {
+        max-width: 35rem;
+        width: 100%;
+      }
+      #container03.default > .wrapper > .inner > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      #container03.default > .wrapper > .inner > *:first-child {
+        margin-top: 0 !important;
+      }
+      #container03.default > .wrapper > .inner > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      #container03.columns > .wrapper > .inner {
+        flex-wrap: wrap;
+        display: flex;
+        align-items: flex-start;
+      }
+      #container03.columns > .wrapper > .inner > * {
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 100%;
+        text-align: var(--alignment);
+        padding: 0 0 0 var(--gutters);
+      }
+      #container03.columns > .wrapper > .inner > * > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      #container03.columns > .wrapper > .inner > * > *:first-child {
+        margin-top: 0 !important;
+      }
+      #container03.columns > .wrapper > .inner > * > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      #container03.columns > .wrapper > .inner > *:first-child {
+        margin-left: calc(var(--gutters) * -1);
+      }
+      #container03.default > .wrapper > .inner > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        max-width: none !important;
+        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+      }
+      #container03.default > .wrapper > .inner > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #container03.default > .wrapper > .inner > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+      #container03.columns > .wrapper > .inner > div > .full {
+        margin-left: calc(var(--gutters) * -0.5);
+        max-width: none !important;
+        width: calc(100% + var(--gutters) + 0.4725px);
+      }
+      #container03.columns > .wrapper > .inner > div:first-child > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px
+        );
+      }
+      #container03.columns > .wrapper > .inner > div:last-child > .full {
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px
+        );
+      }
+      #container03.columns > .wrapper > .inner > div > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+      }
+      #container03.columns > .wrapper > .inner > div > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+      }
+      #container03.columns > .wrapper > .inner > div:first-child,
+      #container03.columns
+        > .wrapper
+        > .inner
+        > div:first-child
+        > .full:first-child {
+        border-top-left-radius: inherit;
+      }
+      #container03.columns > .wrapper > .inner > div:last-child,
+      #container03.columns
+        > .wrapper
+        > .inner
+        > div:last-child
+        > .full:first-child {
+        border-top-right-radius: inherit;
+      }
+      #container03.columns > .wrapper > .inner > .full {
+        align-self: stretch;
+        min-height: 35rem;
+      }
+      #container03.columns > .wrapper > .inner > .full:first-child {
+        border-bottom-left-radius: inherit;
+        border-top-left-radius: inherit;
+      }
+      #container03.columns > .wrapper > .inner > .full:last-child {
+        border-bottom-right-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #container03.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child {
+        border-radius: inherit;
+        height: calc(100% + (var(--padding-vertical) * 2));
+      }
+      #container03.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child
+        > * {
+        border-radius: inherit;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+      #container01 {
+        --alignment: center;
+        --flex-alignment: center;
+        --indent-left: 1;
+        --indent-right: 1;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-attachment: fixed;
+        background-color: #000000;
+        border-color: rgba(255, 255, 255, 0.161);
+        border-style: solid;
+        background-image: linear-gradient( 90deg, rgba(91, 49, 240, 0.95) 0%, rgb(172, 8, 8) 100% ), url("assets/images/container01.svg?v=9c5978d2");
+
+        background-position: 0% 0%,
+          50%
+            calc(
+              50% -
+                (
+                  ((var(--scroll-y, 0) * 1px) - (var(--element-top, 0) * 1px)) *
+                    var(--background-parallax-intensity, 0)
+                )
+            );
+        background-repeat: repeat, no-repeat;
+        background-size: cover, cover;
+      }
+      #container01 > .wrapper > .inner {
+        --gutters: 6rem;
+        --padding-horizontal: 3rem;
+        --padding-vertical: 5rem;
+        --spacing: 1.5rem;
+        padding: var(--padding-vertical) var(--padding-horizontal);
+      }
+      #container01 > .wrapper {
+        max-width: var(--width);
+        width: 100%;
+      }
+      body.is-touch #container01 {
+        background-attachment: scroll;
+      }
+      #container01.default > .wrapper > .inner > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      #container01.default > .wrapper > .inner > *:first-child {
+        margin-top: 0 !important;
+      }
+      #container01.default > .wrapper > .inner > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      #container01.columns > .wrapper > .inner {
+        flex-wrap: wrap;
+        display: flex;
+        align-items: flex-start;
+      }
+      #container01.columns > .wrapper > .inner > * {
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 100%;
+        text-align: var(--alignment);
+        padding: 0 0 0 var(--gutters);
+      }
+      #container01.columns > .wrapper > .inner > * > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      #container01.columns > .wrapper > .inner > * > *:first-child {
+        margin-top: 0 !important;
+      }
+      #container01.columns > .wrapper > .inner > * > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      #container01.columns > .wrapper > .inner > *:first-child {
+        margin-left: calc(var(--gutters) * -1);
+      }
+      #container01.columns > .wrapper > .inner > *:before {
+        border-left: solid 1px rgba(255, 255, 255, 0.161);
+        content: "";
+        display: block;
+        margin-left: calc((var(--gutters) * -0.5) - 0.5px);
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+      }
+      #container01.columns > .wrapper > .inner > *:first-child:before {
+        display: none;
+      }
+      #container01.default > .wrapper > .inner > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        max-width: none !important;
+        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+      }
+      #container01.default > .wrapper > .inner > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #container01.default > .wrapper > .inner > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+      #container01.columns > .wrapper > .inner > div > .full {
+        margin-left: calc((var(--gutters) * -0.5) + 0.5px);
+        max-width: none !important;
+        width: calc(100% + var(--gutters) + 0.4725px - 1px);
+      }
+      #container01.columns > .wrapper > .inner > div:first-child > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px - 0.5px
+        );
+      }
+      #container01.columns > .wrapper > .inner > div:last-child > .full {
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px - 0.5px
+        );
+      }
+      #container01.columns > .wrapper > .inner > div > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+      }
+      #container01.columns > .wrapper > .inner > div > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+      }
+      #container01.columns > .wrapper > .inner > div:first-child,
+      #container01.columns
+        > .wrapper
+        > .inner
+        > div:first-child
+        > .full:first-child {
+        border-top-left-radius: inherit;
+      }
+      #container01.columns > .wrapper > .inner > div:last-child,
+      #container01.columns
+        > .wrapper
+        > .inner
+        > div:last-child
+        > .full:first-child {
+        border-top-right-radius: inherit;
+      }
+      #container01.columns > .wrapper > .inner > .full {
+        align-self: stretch;
+      }
+      #container01.columns > .wrapper > .inner > .full:first-child {
+        border-bottom-left-radius: inherit;
+        border-top-left-radius: inherit;
+      }
+      #container01.columns > .wrapper > .inner > .full:last-child {
+        border-bottom-right-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #container01.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child {
+        border-radius: inherit;
+        height: calc(100% + (var(--padding-vertical) * 2));
+      }
+      #container01.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child
+        > * {
+        border-radius: inherit;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+      #container01 > .wrapper > .inner > :nth-child(1) {
+        width: calc(50% + (var(--gutters) / 2));
+      }
+      #container01 > .wrapper > .inner > :nth-child(2) {
+        width: calc(50% + (var(--gutters) / 2));
+      }
+      #container04 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+      }
+      #container04 > .wrapper > .inner {
+        --gutters: 9rem;
+        --padding-horizontal: 0rem;
+        --padding-vertical: 0rem;
+        --spacing: 1.5rem;
+        padding: var(--padding-vertical) var(--padding-horizontal);
+      }
+      #container04 > .wrapper {
+        max-width: 35rem;
+        width: 100%;
+      }
+      #container04.default > .wrapper > .inner > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      #container04.default > .wrapper > .inner > *:first-child {
+        margin-top: 0 !important;
+      }
+      #container04.default > .wrapper > .inner > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      #container04.columns > .wrapper > .inner {
+        flex-wrap: wrap;
+        display: flex;
+        align-items: flex-start;
+      }
+      #container04.columns > .wrapper > .inner > * {
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 100%;
+        text-align: var(--alignment);
+        padding: 0 0 0 var(--gutters);
+      }
+      #container04.columns > .wrapper > .inner > * > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      #container04.columns > .wrapper > .inner > * > *:first-child {
+        margin-top: 0 !important;
+      }
+      #container04.columns > .wrapper > .inner > * > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      #container04.columns > .wrapper > .inner > *:first-child {
+        margin-left: calc(var(--gutters) * -1);
+      }
+      #container04.default > .wrapper > .inner > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        max-width: none !important;
+        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+      }
+      #container04.default > .wrapper > .inner > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #container04.default > .wrapper > .inner > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+      #container04.columns > .wrapper > .inner > div > .full {
+        margin-left: calc(var(--gutters) * -0.5);
+        max-width: none !important;
+        width: calc(100% + var(--gutters) + 0.4725px);
+      }
+      #container04.columns > .wrapper > .inner > div:first-child > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px
+        );
+      }
+      #container04.columns > .wrapper > .inner > div:last-child > .full {
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px
+        );
+      }
+      #container04.columns > .wrapper > .inner > div > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+      }
+      #container04.columns > .wrapper > .inner > div > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+      }
+      #container04.columns > .wrapper > .inner > div:first-child,
+      #container04.columns
+        > .wrapper
+        > .inner
+        > div:first-child
+        > .full:first-child {
+        border-top-left-radius: inherit;
+      }
+      #container04.columns > .wrapper > .inner > div:last-child,
+      #container04.columns
+        > .wrapper
+        > .inner
+        > div:last-child
+        > .full:first-child {
+        border-top-right-radius: inherit;
+      }
+      #container04.columns > .wrapper > .inner > .full {
+        align-self: stretch;
+      }
+      #container04.columns > .wrapper > .inner > .full:first-child {
+        border-bottom-left-radius: inherit;
+        border-top-left-radius: inherit;
+      }
+      #container04.columns > .wrapper > .inner > .full:last-child {
+        border-bottom-right-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #container04.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child {
+        border-radius: inherit;
+        height: calc(100% + (var(--padding-vertical) * 2));
+      }
+      #container04.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child
+        > * {
+        border-radius: inherit;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+      .container.style1 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+      }
+      .container.style1 > .wrapper > .inner {
+        --gutters: 9rem;
+        --padding-horizontal: 0rem;
+        --padding-vertical: 0rem;
+        --spacing: 1.5rem;
+        padding: var(--padding-vertical) var(--padding-horizontal);
+      }
+      .container.style1 > .wrapper {
+        max-width: 35rem;
+        width: 100%;
+      }
+      .container.style1.default > .wrapper > .inner > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      .container.style1.default > .wrapper > .inner > *:first-child {
+        margin-top: 0 !important;
+      }
+      .container.style1.default > .wrapper > .inner > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      .container.style1.columns > .wrapper > .inner {
+        flex-wrap: wrap;
+        display: flex;
+        align-items: flex-start;
+      }
+      .container.style1.columns > .wrapper > .inner > * {
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 100%;
+        text-align: var(--alignment);
+        padding: 0 0 0 var(--gutters);
+      }
+      .container.style1.columns > .wrapper > .inner > * > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      .container.style1.columns > .wrapper > .inner > * > *:first-child {
+        margin-top: 0 !important;
+      }
+      .container.style1.columns > .wrapper > .inner > * > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      .container.style1.columns > .wrapper > .inner > *:first-child {
+        margin-left: calc(var(--gutters) * -1);
+      }
+      .container.style1.default > .wrapper > .inner > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        max-width: none !important;
+        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+      }
+      .container.style1.default > .wrapper > .inner > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      .container.style1.default > .wrapper > .inner > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+      .container.style1.columns > .wrapper > .inner > div > .full {
+        margin-left: calc(var(--gutters) * -0.5);
+        max-width: none !important;
+        width: calc(100% + var(--gutters) + 0.4725px);
+      }
+      .container.style1.columns > .wrapper > .inner > div:first-child > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px
+        );
+      }
+      .container.style1.columns > .wrapper > .inner > div:last-child > .full {
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px
+        );
+      }
+      .container.style1.columns > .wrapper > .inner > div > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+      }
+      .container.style1.columns > .wrapper > .inner > div > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+      }
+      .container.style1.columns > .wrapper > .inner > div:first-child,
+      .container.style1.columns
+        > .wrapper
+        > .inner
+        > div:first-child
+        > .full:first-child {
+        border-top-left-radius: inherit;
+      }
+      .container.style1.columns > .wrapper > .inner > div:last-child,
+      .container.style1.columns
+        > .wrapper
+        > .inner
+        > div:last-child
+        > .full:first-child {
+        border-top-right-radius: inherit;
+      }
+      .container.style1.columns > .wrapper > .inner > .full {
+        align-self: stretch;
+      }
+      .container.style1.columns > .wrapper > .inner > .full:first-child {
+        border-bottom-left-radius: inherit;
+        border-top-left-radius: inherit;
+      }
+      .container.style1.columns > .wrapper > .inner > .full:last-child {
+        border-bottom-right-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      .container.style1.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child {
+        border-radius: inherit;
+        height: calc(100% + (var(--padding-vertical) * 2));
+      }
+      .container.style1.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child
+        > * {
+        border-radius: inherit;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+      #container02 {
+        --alignment: center;
+        --flex-alignment: center;
+        --indent-left: 1;
+        --indent-right: 1;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-attachment: fixed;
+        background-color: #000000;
+        border-color: rgba(255, 255, 255, 0.239);
+        border-style: solid;
+        border-radius: 1rem;
+         background-position: 0% 0%,
+          50%
+            calc(
+              50% -
+                (
+                  ((var(--scroll-y, 0) * 1px) - (var(--element-top, 0) * 1px)) *
+                    var(--background-parallax-intensity, 0)
+                )
+            );
+        background-repeat: repeat, no-repeat;
+        background-size: cover, cover;
+      }
+      #container02 > .wrapper > .inner {
+        --gutters: 8rem;
+        --padding-horizontal: 4rem;
+        --padding-vertical: 5rem;
+        --spacing: 1.5rem;
+        padding: var(--padding-vertical) var(--padding-horizontal);
+        border-radius: calc(1rem - 1px);
+      }
+      #container02 > .wrapper {
+        max-width: var(--width);
+        width: 100%;
+      }
+      body.is-touch #container02 {
+        background-attachment: scroll;
+      }
+      #container02.default > .wrapper > .inner > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      #container02.default > .wrapper > .inner > *:first-child {
+        margin-top: 0 !important;
+      }
+      #container02.default > .wrapper > .inner > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      #container02.columns > .wrapper > .inner {
+        flex-wrap: wrap;
+        display: flex;
+        align-items: flex-start;
+      }
+      #container02.columns > .wrapper > .inner > * {
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 100%;
+        text-align: var(--alignment);
+        padding: 0 0 0 var(--gutters);
+      }
+      #container02.columns > .wrapper > .inner > * > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      #container02.columns > .wrapper > .inner > * > *:first-child {
+        margin-top: 0 !important;
+      }
+      #container02.columns > .wrapper > .inner > * > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      #container02.columns > .wrapper > .inner > *:first-child {
+        margin-left: calc(var(--gutters) * -1);
+      }
+      #container02.columns > .wrapper > .inner > *:before {
+        border-left: solid 1px rgba(255, 255, 255, 0.239);
+        content: "";
+        display: block;
+        margin-left: calc((var(--gutters) * -0.5) - 0.5px);
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+      }
+      #container02.columns > .wrapper > .inner > *:first-child:before {
+        display: none;
+      }
+      #container02.default > .wrapper > .inner > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        max-width: none !important;
+        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+      }
+      #container02.default > .wrapper > .inner > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #container02.default > .wrapper > .inner > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+      #container02.columns > .wrapper > .inner > div > .full {
+        margin-left: calc((var(--gutters) * -0.5) + 0.5px);
+        max-width: none !important;
+        width: calc(100% + var(--gutters) + 0.4725px - 1px);
+      }
+      #container02.columns > .wrapper > .inner > div:first-child > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px - 0.5px
+        );
+      }
+      #container02.columns > .wrapper > .inner > div:last-child > .full {
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px - 0.5px
+        );
+      }
+      #container02.columns > .wrapper > .inner > div > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+      }
+      #container02.columns > .wrapper > .inner > div > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+      }
+      #container02.columns > .wrapper > .inner > div:first-child,
+      #container02.columns
+        > .wrapper
+        > .inner
+        > div:first-child
+        > .full:first-child {
+        border-top-left-radius: inherit;
+      }
+      #container02.columns > .wrapper > .inner > div:last-child,
+      #container02.columns
+        > .wrapper
+        > .inner
+        > div:last-child
+        > .full:first-child {
+        border-top-right-radius: inherit;
+      }
+      #container02.columns > .wrapper > .inner > .full {
+        align-self: stretch;
+      }
+      #container02.columns > .wrapper > .inner > .full:first-child {
+        border-bottom-left-radius: inherit;
+        border-top-left-radius: inherit;
+      }
+      #container02.columns > .wrapper > .inner > .full:last-child {
+        border-bottom-right-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #container02.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child {
+        border-radius: inherit;
+        height: calc(100% + (var(--padding-vertical) * 2));
+      }
+      #container02.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child
+        > * {
+        border-radius: inherit;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+      #container02 > .wrapper > .inner > :nth-child(1) {
+        width: calc(50% + (var(--gutters) / 2));
+      }
+      #container02 > .wrapper > .inner > :nth-child(2) {
+        width: calc(50% + (var(--gutters) / 2));
+      }
+      #container07 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+      }
+      #container07 > .wrapper > .inner {
+        --gutters: 9rem;
+        --padding-horizontal: 0rem;
+        --padding-vertical: 0rem;
+        --spacing: 1.5rem;
+        padding: var(--padding-vertical) var(--padding-horizontal);
+      }
+      #container07 > .wrapper {
+        max-width: var(--width);
+        width: 100%;
+      }
+      #container07.default > .wrapper > .inner > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      #container07.default > .wrapper > .inner > *:first-child {
+        margin-top: 0 !important;
+      }
+      #container07.default > .wrapper > .inner > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      #container07.columns > .wrapper > .inner {
+        flex-wrap: wrap;
+        display: flex;
+        align-items: flex-start;
+      }
+      #container07.columns > .wrapper > .inner > * {
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 100%;
+        text-align: var(--alignment);
+        padding: 0 0 0 var(--gutters);
+      }
+      #container07.columns > .wrapper > .inner > * > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      #container07.columns > .wrapper > .inner > * > *:first-child {
+        margin-top: 0 !important;
+      }
+      #container07.columns > .wrapper > .inner > * > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      #container07.columns > .wrapper > .inner > *:first-child {
+        margin-left: calc(var(--gutters) * -1);
+      }
+      #container07.default > .wrapper > .inner > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        max-width: none !important;
+        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+      }
+      #container07.default > .wrapper > .inner > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #container07.default > .wrapper > .inner > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+      #container07.columns > .wrapper > .inner > div > .full {
+        margin-left: calc(var(--gutters) * -0.5);
+        max-width: none !important;
+        width: calc(100% + var(--gutters) + 0.4725px);
+      }
+      #container07.columns > .wrapper > .inner > div:first-child > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px
+        );
+      }
+      #container07.columns > .wrapper > .inner > div:last-child > .full {
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px
+        );
+      }
+      #container07.columns > .wrapper > .inner > div > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+      }
+      #container07.columns > .wrapper > .inner > div > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+      }
+      #container07.columns > .wrapper > .inner > div:first-child,
+      #container07.columns
+        > .wrapper
+        > .inner
+        > div:first-child
+        > .full:first-child {
+        border-top-left-radius: inherit;
+      }
+      #container07.columns > .wrapper > .inner > div:last-child,
+      #container07.columns
+        > .wrapper
+        > .inner
+        > div:last-child
+        > .full:first-child {
+        border-top-right-radius: inherit;
+      }
+      #container07.columns > .wrapper > .inner > .full {
+        align-self: stretch;
+      }
+      #container07.columns > .wrapper > .inner > .full:first-child {
+        border-bottom-left-radius: inherit;
+        border-top-left-radius: inherit;
+      }
+      #container07.columns > .wrapper > .inner > .full:last-child {
+        border-bottom-right-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      #container07.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child {
+        border-radius: inherit;
+        height: calc(100% + (var(--padding-vertical) * 2));
+      }
+      #container07.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child
+        > * {
+        border-radius: inherit;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+      hr {
+        align-items: center;
+        border: 0;
+        display: flex;
+        justify-content: var(--flex-alignment);
+        min-height: 1rem;
+        padding: 0;
+        position: relative;
+        width: 100%;
+      }
+      hr:before {
+        content: "";
+      }
+      hr.style1:before {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.149);
+        height: 1px;
+      }
+      .list {
+        display: block;
+      }
+      .list ul,
+      .list ol {
+        display: inline-block;
+        max-width: 100%;
+        text-align: var(--site-language-alignment);
+        vertical-align: middle;
+      }
+      .list ul li,
+      .list ol li {
+        direction: var(--site-language-direction);
+        display: flex;
+        position: relative;
+      }
+      .list ul li:before,
+      .list ol li:before {
+        background-repeat: no-repeat;
+        content: "";
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 0;
+        font-variant: normal !important;
+        letter-spacing: 0 !important;
+        order: 1;
+        position: relative;
+      }
+      .list ul li:after,
+      .list ol li:after {
+        content: "";
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 0;
+        order: 2;
+        pointer-events: none;
+      }
+      .list ul li p,
+      .list ol li p {
+        flex-grow: 1;
+        flex-shrink: 1;
+        order: 3;
+      }
+      .list ul li:first-child,
+      .list ol li:first-child {
+        margin-top: 0 !important;
+      }
+      #list03 {
+        color: rgba(255, 255, 255, 0.659);
+        font-family: "Inter", sans-serif;
+        font-size: 1em;
+        line-height: 2;
+        font-weight: 300;
+      }
+      #list03 mark {
+        color: #ffffff;
+        background-color: transparent;
+      }
+      #list03 a {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+      #list03 a:hover {
+        color: #6a00ff;
+      }
+      #list03 ol {
+        width: 100%;
+      }
+      #list03 ol li {
+        margin-top: 0.5rem;
+        counter-increment: item;
+      }
+      #list03 ol li:after {
+        width: 0.625rem;
+      }
+      #list03 ol li:before {
+        color: rgba(255, 255, 255, 0.149);
+        font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+          "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 1rem;
+        font-weight: 400;
+        content: counter(item) ".";
+        border-radius: 2rem;
+        background-position: left 60%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 2rem;
+        line-height: 2rem;
+        min-width: 0.75rem;
+      }
+      #list03 ol li:first-child {
+        counter-reset: item 0;
+      }
+      .icc-credits {
+        display: block;
+        opacity: 1 !important;
+        position: relative;
+        transition-delay: 0s !important;
+      }
+      .icc-credits span {
+        border-radius: 24px;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 1;
+        position: relative;
+        text-decoration: none;
+        width: auto;
+      }
+      .icc-credits span a {
+        display: inline-block;
+        padding: 0.5em 0.375em;
+        position: relative;
+        text-decoration: none;
+        transition: color 0.25s ease, transform 0.25s ease;
+        z-index: 1;
+      }
+      .icc-credits span a:before {
+        content: "( ";
+        opacity: 1;
+        transition: opacity 0.25s ease;
+      }
+      .icc-credits span a:after {
+        content: " )";
+        opacity: 1;
+        transition: opacity 0.25s ease;
+      }
+      .icc-credits span::after {
+        background-image: linear-gradient(30deg, #a464a1 15%, #3b5dad 85%);
+        border-radius: inherit;
+        box-shadow: 0 0.25em 1.25em 0 rgba(0, 0, 0, 0.25);
+        content: "";
+        display: block;
+        height: calc(100% + 2px);
+        left: -1px;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: -1px;
+        transition: opacity 0.25s ease, box-shadow 0.25s ease,
+          transform 0.25s ease;
+        width: calc(100% + 2px);
+      }
+      .icc-credits span:hover {
+        text-transform: none !important;
+      }
+      .icc-credits span:hover a {
+        color: #ffffff !important;
+        transform: scale(1.1) translateY(-0.05rem);
+      }
+      .icc-credits span:hover a:before {
+        opacity: 0;
+      }
+      .icc-credits span:hover a:after {
+        opacity: 0;
+      }
+      .icc-credits span:hover::after {
+        opacity: 1;
+        transform: scale(1.1) translateY(-0.05rem);
+      }
+      #credits span {
+        color: rgba(255, 255, 255, 0.498);
+        margin-top: 1.5rem !important;
+      }
+      @media (max-width: 1920px) {
+      }
+      @media (max-width: 1680px) {
+        html {
+          font-size: 13pt;
+        }
+      }
+      @media (max-width: 1280px) {
+        html {
+          font-size: 13pt;
+        }
+        #container01 {
+          background-attachment: scroll;
+        }
+        #container02 {
+          background-attachment: scroll;
+        }
+      }
+      @media (max-width: 1024px) {
+      }
+      @media (max-width: 980px) {
+        html {
+          font-size: 11pt;
+        }
+      }
+      @media (max-width: 736px) {
+        html {
+          font-size: 12pt;
+        }
+        #main > .inner {
+          --padding-horizontal: 2rem;
+          --padding-vertical: 4rem;
+          --spacing: 4rem;
+        }
+        #image02 .frame {
+          width: 6rem;
+        }
+        .image.style1 .frame {
+          width: 6rem;
+        }
+        .image.style2 .frame {
+          width: 53.5rem;
+          height: 30.3125rem !important;
+        }
+        .image.style2 img {
+          height: 100% !important;
+          object-fit: cover;
+          object-position: center;
+          width: 100% !important;
+        }
+        h1.style3,
+        h2.style3,
+        h3.style3,
+        p.style3 {
+          letter-spacing: 0rem;
+          width: 100%;
+          font-size: 2.5em;
+          line-height: 1.25;
+        }
+        h1.style1,
+        h2.style1,
+        h3.style1,
+        p.style1 {
+          letter-spacing: 0rem;
+          width: 100%;
+          font-size: 1em;
+          line-height: 2;
+        }
+        h1.style2,
+        h2.style2,
+        h3.style2,
+        p.style2 {
+          letter-spacing: 0.021875rem;
+          width: calc(100% + 0.021875rem);
+          font-size: 1.5em;
+          line-height: 1.75;
+        }
+        h1.style4,
+        h2.style4,
+        h3.style4,
+        p.style4 {
+          letter-spacing: 0rem;
+          width: 100%;
+          font-size: 3em;
+          line-height: 1;
+        }
+        h1.style5,
+        h2.style5,
+        h3.style5,
+        p.style5 {
+          letter-spacing: 0rem;
+          width: 100%;
+          font-size: 3em;
+          line-height: 1;
+        }
+        h1.style6,
+        h2.style6,
+        h3.style6,
+        p.style6 {
+          letter-spacing: 0rem;
+          width: 100%;
+          font-size: 1em;
+          line-height: 2;
+        }
+        .buttons.style2 {
+          gap: 1rem;
+        }
+        .buttons.style2 li a {
+          letter-spacing: 0rem;
+          font-size: 1em;
+        }
+        .buttons.style2 li a svg {
+          width: 1.125em;
+        }
+        .buttons.style1 {
+          gap: 1rem;
+        }
+        .buttons.style1 li a {
+          letter-spacing: 0rem;
+          font-size: 1em;
+        }
+        .buttons.style1 li a svg {
+          width: 1.125em;
+        }
+        .buttons.style3 {
+          gap: 1rem;
+        }
+        .buttons.style3 li a {
+          letter-spacing: 0rem;
+          font-size: 1em;
+        }
+        .buttons.style3 li a svg {
+          width: 1.125em;
+        }
+        #container03 {
+          min-height: 26.25rem;
+        }
+        #container03 > .wrapper > .inner {
+          --gutters: 6rem;
+          --padding-horizontal: 0rem;
+          --padding-vertical: 0rem;
+          --spacing: 1.5rem;
+        }
+        #container03.columns > .wrapper > .inner {
+          flex-direction: column !important;
+          flex-wrap: nowrap !important;
+        }
+        #container03.columns > .wrapper > .inner > span {
+          height: 0;
+          margin-top: calc(var(--gutters) * -1);
+          pointer-events: none;
+          visibility: hidden;
+        }
+        #container03.columns > .wrapper > .inner > *:first-child {
+          margin-left: 0 !important;
+          padding-top: 0 !important;
+        }
+        #container03.columns > .wrapper > .inner > * {
+          padding: calc(var(--gutters) * 0.5) 0 !important;
+        }
+        #container03.columns > .wrapper > .inner > *:last-child {
+          padding-bottom: 0 !important;
+        }
+        #container03.columns > .wrapper > .inner > div > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container03.columns > .wrapper > .inner > div:first-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container03.columns > .wrapper > .inner > div:last-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container03.columns > .wrapper > .inner > div > .full:first-child {
+          margin-top: calc(var(--gutters) * -0.5) !important;
+        }
+        #container03.columns > .wrapper > .inner > div > .full:last-child {
+          margin-bottom: calc(var(--gutters) * -0.5) !important;
+        }
+        #container03.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          margin-top: calc(var(--padding-vertical) * -1) !important;
+        }
+        #container03.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        }
+        #container03.columns > .wrapper > .inner > div:first-of-type,
+        #container03.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          border-top-left-radius: inherit;
+          border-top-right-radius: inherit;
+        }
+        #container03.columns > .wrapper > .inner > div:last-of-type,
+        #container03.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          border-bottom-left-radius: inherit;
+          border-bottom-right-radius: inherit;
+        }
+        #container03.columns > .wrapper > .inner > div:first-of-type,
+        #container03.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:last-child {
+          border-bottom-left-radius: 0 !important;
+        }
+        #container03.columns > .wrapper > .inner > div:last-of-type,
+        #container03.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:first-child {
+          border-top-right-radius: 0 !important;
+        }
+        #container03.columns > .wrapper > .inner > .full {
+          min-height: 26.25rem;
+        }
+        #container03.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child {
+          height: auto;
+        }
+        #container03.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child
+          > * {
+          height: auto;
+          position: relative;
+          width: auto;
+        }
+        #container01 > .wrapper > .inner {
+          --gutters: 6rem;
+          --padding-horizontal: 2rem;
+          --padding-vertical: 3.5rem;
+          --spacing: 1.5rem;
+        }
+        #container01.columns > .wrapper > .inner {
+          flex-direction: column !important;
+          flex-wrap: nowrap !important;
+        }
+        #container01.columns > .wrapper > .inner > span {
+          height: 0;
+          margin-top: calc(var(--gutters) * -1);
+          pointer-events: none;
+          visibility: hidden;
+        }
+        #container01.columns
+          > .wrapper
+          > .inner
+          > span:first-child
+          + div:before {
+          display: none !important;
+        }
+        #container01.columns > .wrapper > .inner > *:first-child {
+          margin-left: 0 !important;
+          padding-top: 0 !important;
+        }
+        #container01.columns > .wrapper > .inner > * {
+          padding: calc(var(--gutters) * 0.5) 0 !important;
+        }
+        #container01.columns > .wrapper > .inner > *:before {
+          border-top: solid 1px rgba(255, 255, 255, 0.161) !important;
+          height: 0 !important;
+          margin-left: 0 !important;
+          top: auto !important;
+          margin-top: calc((var(--gutters) * -0.5) - 0.5px) !important;
+          left: 0 !important;
+          width: 100% !important;
+        }
+        #container01.columns > .wrapper > .inner > *:last-child {
+          padding-bottom: 0 !important;
+        }
+        #container01.columns > .wrapper > .inner > *:first-child:before {
+          display: none !important;
+        }
+        #container01.columns > .wrapper > .inner > *:last-child:before {
+          display: block !important;
+        }
+        #container01.columns > .wrapper > .inner > div > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container01.columns > .wrapper > .inner > div:first-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container01.columns > .wrapper > .inner > div:last-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container01.columns > .wrapper > .inner > div > .full:first-child {
+          margin-top: calc((var(--gutters) * -0.5) + 0.5px) !important;
+        }
+        #container01.columns > .wrapper > .inner > div > .full:last-child {
+          margin-bottom: calc((var(--gutters) * -0.5) + 0.5px) !important;
+        }
+        #container01.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          margin-top: calc(var(--padding-vertical) * -1) !important;
+        }
+        #container01.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        }
+        #container01.columns > .wrapper > .inner > div:first-of-type,
+        #container01.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          border-top-left-radius: inherit;
+          border-top-right-radius: inherit;
+        }
+        #container01.columns > .wrapper > .inner > div:last-of-type,
+        #container01.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          border-bottom-left-radius: inherit;
+          border-bottom-right-radius: inherit;
+        }
+        #container01.columns > .wrapper > .inner > div:first-of-type,
+        #container01.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:last-child {
+          border-bottom-left-radius: 0 !important;
+        }
+        #container01.columns > .wrapper > .inner > div:last-of-type,
+        #container01.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:first-child {
+          border-top-right-radius: 0 !important;
+        }
+        #container01.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child {
+          height: auto;
+        }
+        #container01.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child
+          > * {
+          height: auto;
+          position: relative;
+          width: auto;
+        }
+        #container01 > .wrapper > .inner > :nth-child(1) {
+          min-height: 100% !important;
+          width: 100% !important;
+        }
+        #container01 > .wrapper > .inner > :nth-child(2) {
+          min-height: 100% !important;
+          width: 100% !important;
+        }
+        #container04 > .wrapper > .inner {
+          --gutters: 6rem;
+          --padding-horizontal: 0rem;
+          --padding-vertical: 0rem;
+          --spacing: 1.5rem;
+        }
+        #container04.columns > .wrapper > .inner {
+          flex-direction: column !important;
+          flex-wrap: nowrap !important;
+        }
+        #container04.columns > .wrapper > .inner > span {
+          height: 0;
+          margin-top: calc(var(--gutters) * -1);
+          pointer-events: none;
+          visibility: hidden;
+        }
+        #container04.columns > .wrapper > .inner > *:first-child {
+          margin-left: 0 !important;
+          padding-top: 0 !important;
+        }
+        #container04.columns > .wrapper > .inner > * {
+          padding: calc(var(--gutters) * 0.5) 0 !important;
+        }
+        #container04.columns > .wrapper > .inner > *:last-child {
+          padding-bottom: 0 !important;
+        }
+        #container04.columns > .wrapper > .inner > div > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container04.columns > .wrapper > .inner > div:first-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container04.columns > .wrapper > .inner > div:last-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container04.columns > .wrapper > .inner > div > .full:first-child {
+          margin-top: calc(var(--gutters) * -0.5) !important;
+        }
+        #container04.columns > .wrapper > .inner > div > .full:last-child {
+          margin-bottom: calc(var(--gutters) * -0.5) !important;
+        }
+        #container04.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          margin-top: calc(var(--padding-vertical) * -1) !important;
+        }
+        #container04.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        }
+        #container04.columns > .wrapper > .inner > div:first-of-type,
+        #container04.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          border-top-left-radius: inherit;
+          border-top-right-radius: inherit;
+        }
+        #container04.columns > .wrapper > .inner > div:last-of-type,
+        #container04.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          border-bottom-left-radius: inherit;
+          border-bottom-right-radius: inherit;
+        }
+        #container04.columns > .wrapper > .inner > div:first-of-type,
+        #container04.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:last-child {
+          border-bottom-left-radius: 0 !important;
+        }
+        #container04.columns > .wrapper > .inner > div:last-of-type,
+        #container04.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:first-child {
+          border-top-right-radius: 0 !important;
+        }
+        #container04.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child {
+          height: auto;
+        }
+        #container04.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child
+          > * {
+          height: auto;
+          position: relative;
+          width: auto;
+        }
+        .container.style1 > .wrapper > .inner {
+          --gutters: 6rem;
+          --padding-horizontal: 0rem;
+          --padding-vertical: 0rem;
+          --spacing: 1.5rem;
+        }
+        .container.style1.columns > .wrapper > .inner {
+          flex-direction: column !important;
+          flex-wrap: nowrap !important;
+        }
+        .container.style1.columns > .wrapper > .inner > span {
+          height: 0;
+          margin-top: calc(var(--gutters) * -1);
+          pointer-events: none;
+          visibility: hidden;
+        }
+        .container.style1.columns > .wrapper > .inner > *:first-child {
+          margin-left: 0 !important;
+          padding-top: 0 !important;
+        }
+        .container.style1.columns > .wrapper > .inner > * {
+          padding: calc(var(--gutters) * 0.5) 0 !important;
+        }
+        .container.style1.columns > .wrapper > .inner > *:last-child {
+          padding-bottom: 0 !important;
+        }
+        .container.style1.columns > .wrapper > .inner > div > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        .container.style1.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        .container.style1.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        .container.style1.columns
+          > .wrapper
+          > .inner
+          > div
+          > .full:first-child {
+          margin-top: calc(var(--gutters) * -0.5) !important;
+        }
+        .container.style1.columns > .wrapper > .inner > div > .full:last-child {
+          margin-bottom: calc(var(--gutters) * -0.5) !important;
+        }
+        .container.style1.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          margin-top: calc(var(--padding-vertical) * -1) !important;
+        }
+        .container.style1.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        }
+        .container.style1.columns > .wrapper > .inner > div:first-of-type,
+        .container.style1.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          border-top-left-radius: inherit;
+          border-top-right-radius: inherit;
+        }
+        .container.style1.columns > .wrapper > .inner > div:last-of-type,
+        .container.style1.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          border-bottom-left-radius: inherit;
+          border-bottom-right-radius: inherit;
+        }
+        .container.style1.columns > .wrapper > .inner > div:first-of-type,
+        .container.style1.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:last-child {
+          border-bottom-left-radius: 0 !important;
+        }
+        .container.style1.columns > .wrapper > .inner > div:last-of-type,
+        .container.style1.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:first-child {
+          border-top-right-radius: 0 !important;
+        }
+        .container.style1.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child {
+          height: auto;
+        }
+        .container.style1.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child
+          > * {
+          height: auto;
+          position: relative;
+          width: auto;
+        }
+        #container02 > .wrapper > .inner {
+          --gutters: 6rem;
+          --padding-horizontal: 2rem;
+          --padding-vertical: 3.5rem;
+          --spacing: 1.5rem;
+        }
+        #container02.columns > .wrapper > .inner {
+          flex-direction: column !important;
+          flex-wrap: nowrap !important;
+        }
+        #container02.columns > .wrapper > .inner > span {
+          height: 0;
+          margin-top: calc(var(--gutters) * -1);
+          pointer-events: none;
+          visibility: hidden;
+        }
+        #container02.columns
+          > .wrapper
+          > .inner
+          > span:first-child
+          + div:before {
+          display: none !important;
+        }
+        #container02.columns > .wrapper > .inner > *:first-child {
+          margin-left: 0 !important;
+          padding-top: 0 !important;
+        }
+        #container02.columns > .wrapper > .inner > * {
+          padding: calc(var(--gutters) * 0.5) 0 !important;
+        }
+        #container02.columns > .wrapper > .inner > *:before {
+          border-top: solid 1px rgba(255, 255, 255, 0.239) !important;
+          height: 0 !important;
+          margin-left: 0 !important;
+          top: auto !important;
+          margin-top: calc((var(--gutters) * -0.5) - 0.5px) !important;
+          left: 0 !important;
+          width: 100% !important;
+        }
+        #container02.columns > .wrapper > .inner > *:last-child {
+          padding-bottom: 0 !important;
+        }
+        #container02.columns > .wrapper > .inner > *:first-child:before {
+          display: none !important;
+        }
+        #container02.columns > .wrapper > .inner > *:last-child:before {
+          display: block !important;
+        }
+        #container02.columns > .wrapper > .inner > div > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container02.columns > .wrapper > .inner > div:first-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container02.columns > .wrapper > .inner > div:last-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container02.columns > .wrapper > .inner > div > .full:first-child {
+          margin-top: calc((var(--gutters) * -0.5) + 0.5px) !important;
+        }
+        #container02.columns > .wrapper > .inner > div > .full:last-child {
+          margin-bottom: calc((var(--gutters) * -0.5) + 0.5px) !important;
+        }
+        #container02.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          margin-top: calc(var(--padding-vertical) * -1) !important;
+        }
+        #container02.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        }
+        #container02.columns > .wrapper > .inner > div:first-of-type,
+        #container02.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          border-top-left-radius: inherit;
+          border-top-right-radius: inherit;
+        }
+        #container02.columns > .wrapper > .inner > div:last-of-type,
+        #container02.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          border-bottom-left-radius: inherit;
+          border-bottom-right-radius: inherit;
+        }
+        #container02.columns > .wrapper > .inner > div:first-of-type,
+        #container02.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:last-child {
+          border-bottom-left-radius: 0 !important;
+        }
+        #container02.columns > .wrapper > .inner > div:last-of-type,
+        #container02.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:first-child {
+          border-top-right-radius: 0 !important;
+        }
+        #container02.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child {
+          height: auto;
+        }
+        #container02.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child
+          > * {
+          height: auto;
+          position: relative;
+          width: auto;
+        }
+        #container02 > .wrapper > .inner > :nth-child(1) {
+          min-height: 100% !important;
+          width: 100% !important;
+        }
+        #container02 > .wrapper > .inner > :nth-child(2) {
+          min-height: 100% !important;
+          width: 100% !important;
+        }
+        #container07 > .wrapper > .inner {
+          --gutters: 6rem;
+          --padding-horizontal: 0rem;
+          --padding-vertical: 0rem;
+          --spacing: 1.5rem;
+        }
+        #container07.columns > .wrapper > .inner {
+          flex-direction: column !important;
+          flex-wrap: nowrap !important;
+        }
+        #container07.columns > .wrapper > .inner > span {
+          height: 0;
+          margin-top: calc(var(--gutters) * -1);
+          pointer-events: none;
+          visibility: hidden;
+        }
+        #container07.columns > .wrapper > .inner > *:first-child {
+          margin-left: 0 !important;
+          padding-top: 0 !important;
+        }
+        #container07.columns > .wrapper > .inner > * {
+          padding: calc(var(--gutters) * 0.5) 0 !important;
+        }
+        #container07.columns > .wrapper > .inner > *:last-child {
+          padding-bottom: 0 !important;
+        }
+        #container07.columns > .wrapper > .inner > div > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container07.columns > .wrapper > .inner > div:first-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container07.columns > .wrapper > .inner > div:last-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        #container07.columns > .wrapper > .inner > div > .full:first-child {
+          margin-top: calc(var(--gutters) * -0.5) !important;
+        }
+        #container07.columns > .wrapper > .inner > div > .full:last-child {
+          margin-bottom: calc(var(--gutters) * -0.5) !important;
+        }
+        #container07.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          margin-top: calc(var(--padding-vertical) * -1) !important;
+        }
+        #container07.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        }
+        #container07.columns > .wrapper > .inner > div:first-of-type,
+        #container07.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          border-top-left-radius: inherit;
+          border-top-right-radius: inherit;
+        }
+        #container07.columns > .wrapper > .inner > div:last-of-type,
+        #container07.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          border-bottom-left-radius: inherit;
+          border-bottom-right-radius: inherit;
+        }
+        #container07.columns > .wrapper > .inner > div:first-of-type,
+        #container07.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:last-child {
+          border-bottom-left-radius: 0 !important;
+        }
+        #container07.columns > .wrapper > .inner > div:last-of-type,
+        #container07.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:first-child {
+          border-top-right-radius: 0 !important;
+        }
+        #container07.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child {
+          height: auto;
+        }
+        #container07.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child
+          > * {
+          height: auto;
+          position: relative;
+          width: auto;
+        }
+        #list03 {
+          letter-spacing: 0rem;
+          font-size: 1em;
+          line-height: 2;
+        }
+        #list03 ol li:after {
+          width: 0.625rem;
+        }
+        #list03 ol li:before {
+          height: 2rem;
+          line-height: 2rem;
+          min-width: 0.75rem;
+        }
+      }
+      @media (max-width: 480px) {
+        #main > .inner {
+          --spacing: 3.0625rem;
+        }
+        .image.style2 .frame {
+          height: 24.25rem !important;
+        }
+        .buttons.style2 {
+          flex-direction: column;
+          flex-wrap: nowrap;
+        }
+        .buttons.style2 li a {
+          max-width: 32rem;
+          width: 100%;
+        }
+        .buttons.style1 {
+          flex-direction: column;
+          flex-wrap: nowrap;
+        }
+        .buttons.style1 li a {
+          max-width: 32rem;
+          width: 100%;
+        }
+        .buttons.style3 {
+          flex-direction: column;
+          flex-wrap: nowrap;
+        }
+        .buttons.style3 li a {
+          max-width: 32rem;
+          width: 100%;
+        }
+        #container03 > .wrapper > .inner {
+          --spacing: 1.3125rem;
+        }
+        #container01 > .wrapper > .inner {
+          --spacing: 1.3125rem;
+        }
+        #container04 > .wrapper > .inner {
+          --spacing: 1.3125rem;
+        }
+        .container.style1 > .wrapper > .inner {
+          --spacing: 1.3125rem;
+        }
+        #container02 > .wrapper > .inner {
+          --spacing: 1.3125rem;
+        }
+        #container07 > .wrapper > .inner {
+          --spacing: 1.3125rem;
+        }
+      }
+      @media (max-width: 360px) {
+        #main > .inner {
+          --padding-horizontal: 1.5rem;
+          --padding-vertical: 3rem;
+          --spacing: 2.25rem;
+        }
+        .image.style2 .frame {
+          height: 21.21875rem !important;
+        }
+        h1.style3,
+        h2.style3,
+        h3.style3,
+        p.style3 {
+          font-size: 2.5em;
+        }
+        h1.style1,
+        h2.style1,
+        h3.style1,
+        p.style1 {
+          font-size: 1em;
+        }
+        h1.style2,
+        h2.style2,
+        h3.style2,
+        p.style2 {
+          font-size: 1.5em;
+        }
+        h1.style4,
+        h2.style4,
+        h3.style4,
+        p.style4 {
+          font-size: 3em;
+        }
+        h1.style5,
+        h2.style5,
+        h3.style5,
+        p.style5 {
+          font-size: 3em;
+        }
+        h1.style6,
+        h2.style6,
+        h3.style6,
+        p.style6 {
+          font-size: 1em;
+        }
+        .buttons.style2 {
+          gap: 0.75rem;
+        }
+        .buttons.style1 {
+          gap: 0.75rem;
+        }
+        .buttons.style3 {
+          gap: 0.75rem;
+        }
+        #container03 > .wrapper > .inner {
+          --gutters: 4.5rem;
+          --padding-horizontal: 0rem;
+          --padding-vertical: 0rem;
+          --spacing: 1.125rem;
+        }
+        #container03 {
+          min-height: 17.5rem;
+        }
+        #container03.columns > .wrapper > .inner > .full {
+          min-height: 17.5rem;
+        }
+        #container01 > .wrapper > .inner {
+          --gutters: 4.5rem;
+          --padding-horizontal: 1.5rem;
+          --padding-vertical: 2.625rem;
+          --spacing: 1.125rem;
+        }
+        #container04 > .wrapper > .inner {
+          --gutters: 4.5rem;
+          --padding-horizontal: 0rem;
+          --padding-vertical: 0rem;
+          --spacing: 1.125rem;
+        }
+        .container.style1 > .wrapper > .inner {
+          --gutters: 4.5rem;
+          --padding-horizontal: 0rem;
+          --padding-vertical: 0rem;
+          --spacing: 1.125rem;
+        }
+        #container02 > .wrapper > .inner {
+          --gutters: 4.5rem;
+          --padding-horizontal: 1.5rem;
+          --padding-vertical: 2.625rem;
+          --spacing: 1.125rem;
+        }
+        #container07 > .wrapper > .inner {
+          --gutters: 4.5rem;
+          --padding-horizontal: 0rem;
+          --padding-vertical: 0rem;
+          --spacing: 1.125rem;
+        }
+        #list03 {
+          font-size: 1em;
+        }
+        #list03 ol li:after {
+          width: 0.625rem;
+        }
+        #list03 ol li:before {
+          height: 2rem;
+          line-height: 2rem;
+          min-width: 0.75rem;
+        }
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 0px
+    }
+
+      .package, .description, .price, .buy {
+        padding: 15px;
+        border: 1px dotted rgba(255, 255, 255, 0.659);
+        font-family: "Inter", sans-serif;
+        font-size: 1em;
+        line-height: 2;
+        font-weight: 300;
+        vertical-align: middle;
+        text-align: left;
+      }
+
+      .price, .package {
+        white-space: nowrap
+      }
+
+      .buy-button {
+        color: white;
+        padding: 8px 16px;
+        background: #6a00ff;
+        border-radius: 6px;
+        text-decoration: none;
+      }
+
+      .div-price {
+        /* border: 2px solid rgba(40, 202, 0, 0.5); */
+        border-radius: 6px;
+        color: rgba(255, 255, 255, 0.659)
+      }
+
+      .keys {
+        color: rgba(255,255,255, 0)
+      }
+    </style>
+    
+    <style></style>
+  </head>
+  <body class="is-ready"><span><style>
+        body {
+          overflow: auto !important;
+        }
+        body:after {
+          display: none !important;
+        }
+        #main > .inner {
+          opacity: 1 !important;
+        }
+      </style></span>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
+      <symbol id="icon-ecbd7520f72820fb3c1bfce19d8ed9ce" viewBox="0 0 40 40">
+        <path d="M5.2,14.6l1.5-1.5c0.2-0.2,0.5-0.2,0.7,0l12.4,12.4l12.4-12.4c0.2-0.2,0.5-0.2,0.7,0l1.6,1.6c0.2,0.2,0.2,0.5,0,0.7L19.8,30 L5.2,15.4C5,15.2,5,14.8,5.2,14.6z"></path>
+      </symbol>
+      <symbol id="icon-1c13576468284a37278ea9bf6776a7f6" viewBox="0 0 40 40">
+        <path d="M34.4,23.1c-0.2,0.3-0.5,0.4-0.8,0.4L12.2,26c0.2,0.8,0.3,1.3,0.3,1.4c0,0.2-0.2,0.7-0.5,1.3h18.8 c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9c-0.3,0.3-0.6,0.4-0.9,0.4h-1.3H11.2H9.9 c-0.4,0-0.7-0.1-0.9-0.4c-0.3-0.3-0.4-0.6-0.4-0.9c0-0.2,0.1-0.4,0.2-0.6c0.1-0.3,0.2-0.5,0.3-0.7c0.1-0.2,0.3-0.5,0.4-0.8 c0.2-0.3,0.3-0.5,0.3-0.6l-3.6-18H2c-0.4,0-0.7-0.1-0.9-0.4C0.8,8.7,0.7,8.4,0.7,8c0-0.4,0.1-0.7,0.4-0.9C1.3,6.8,1.6,6.7,2,6.7h5.2 c0.2,0,0.4,0,0.6,0.1C8,6.9,8.1,7,8.2,7.1c0.1,0.1,0.2,0.3,0.3,0.5C8.6,7.9,8.6,8,8.7,8.2c0,0.1,0.1,0.3,0.1,0.6 c0,0.3,0.1,0.4,0.1,0.5h24.6c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9v11.6C34.8,22.5,34.6,22.8,34.4,23.1z M32.5,11.5 c-0.1-0.1-0.1-0.1-0.5-0.1c-3.6,0-22.7,0-22.7,0l2.4,12.2c0,0,17.4-1.9,20.5-2.2c0.3,0,0.2-0.1,0.3-0.2c0.1-0.1,0.1-0.1,0.1-0.4 c0-1.5,0-7.3,0-8.9C32.6,11.7,32.6,11.6,32.5,11.5z M31.4,32.2c0.5,0.5,0.8,1.1,0.8,1.9c0,0.7-0.3,1.3-0.8,1.9 c-0.5,0.5-1.1,0.8-1.8,0.8c-0.7,0-1.3-0.3-1.8-0.8c-0.5-0.5-0.8-1.1-0.8-1.9c0-0.7,0.3-1.3,0.8-1.9c0.5-0.5,1.1-0.8,1.8-0.8 C30.2,31.4,30.8,31.7,31.4,32.2z M13,32.2c0.5,0.5,0.8,1.1,0.8,1.9c0,0.7-0.3,1.3-0.8,1.9c-0.5,0.5-1.1,0.8-1.8,0.8 c-0.7,0-1.3-0.3-1.8-0.8c-0.5-0.5-0.8-1.1-0.8-1.9c0-0.7,0.3-1.3,0.8-1.9c0.5-0.5,1.1-0.8,1.8-0.8C11.9,31.4,12.5,31.7,13,32.2z"></path>
+      </symbol>
+      <symbol id="icon-82f3578d47d0f21e107a859dbadc82fd" viewBox="0 0 40 40">
+        <path d="M13,32.1c-0.5-0.5-1.1-0.7-1.9-0.7s-1.4,0.2-1.9,0.7c-0.5,0.5-0.7,1.1-0.7,1.9c0,0.7,0.2,1.4,0.7,1.9 c0.5,0.5,1.1,0.7,1.9,0.7s1.4-0.2,1.9-0.7c0.5-0.5,0.7-1.1,0.7-1.9S13.5,32.6,13,32.1z M31.2,32.1c-0.5-0.5-1-0.7-1.8-0.7 s-1.4,0.2-1.9,0.7c-0.5,0.5-0.7,1.1-0.7,1.9c0,0.7,0.2,1.4,0.7,1.9s1.1,0.7,1.9,0.7s1.4-0.2,1.9-0.7c0.5-0.5,0.7-1.1,0.7-1.9 S31.7,32.6,31.2,32.1z M34.2,9.8c-0.2-0.2-0.5-0.4-0.9-0.4H8.9c0-0.1,0-0.3-0.1-0.5c0-0.3-0.1-0.5-0.1-0.6c0-0.1-0.1-0.3-0.2-0.5 c0-0.2-0.1-0.4-0.2-0.5C8.1,7.1,8,7,7.8,6.9C7.6,6.8,7.4,6.8,7.2,6.8H2c-0.3,0-0.6,0.1-0.9,0.4C0.7,7.6,0.7,7.8,0.7,8.1 c0,0.3,0.1,0.6,0.4,0.9s0.5,0.4,0.9,0.4h4.2l3.5,17.8c0,0.1-0.1,0.3-0.3,0.6c-0.2,0.3-0.3,0.6-0.4,0.8c-0.1,0.2-0.2,0.4-0.3,0.7 c-0.1,0.3-0.2,0.5-0.2,0.6c0,0.3,0.1,0.6,0.4,0.9c0.2,0.2,0.5,0.4,0.9,0.4h20.9c0.3,0,0.6-0.1,0.9-0.4c0.2-0.2,0.4-0.5,0.4-0.9 c0-0.4-0.1-0.6-0.4-0.9c-0.2-0.2-0.5-0.4-0.9-0.4H12.1c0.3-0.6,0.5-1,0.5-1.4c0-0.1-0.1-0.6-0.3-1.5l21.3-2.5c0.3,0,0.6-0.2,0.8-0.4 c0.2-0.2,0.3-0.5,0.3-0.8V10.7C34.7,10.4,34.5,10.1,34.2,9.8z"></path>
+      </symbol>
+      <symbol id="icon-67ad41ecc66a1b1cd00d0d3b20c00017" viewBox="0 0 40 40">
+        <path d="M34.1,19.9c0,0.3-0.1,0.3-0.1,0.4L21.3,33.1c-0.1,0.1-0.1,0.1-0.4,0.1c-0.3,0-0.3-0.1-0.4-0.1L19,31.6 c-0.1-0.1-0.1-0.1-0.1-0.4s0.1-0.3,0.1-0.4l9.2-9.2H5.8c-0.1,0-0.2,0-0.2,0c0,0,0,0,0,0c-0.1-0.1-0.1-0.2-0.1-0.4v-2.5 c0-0.2,0.1-0.4,0.1-0.5c0,0,0.1,0,0.2,0h22.4L19,9c-0.1-0.1-0.1-0.1-0.1-0.4c0-0.3,0.1-0.3,0.1-0.4l1.5-1.5c0.1-0.1,0.1-0.1,0.4-0.1 c0.3,0,0.3,0.1,0.4,0.1L34,19.5C34,19.6,34.1,19.6,34.1,19.9z"></path>
+      </symbol>
+      <symbol id="icon-c0646d28bbeb18e39eb973f96b44bd0f" viewBox="0 0 40 40">
+        <path d="M34.9,30.5V15.6c-0.4,0.4-0.8,0.9-1.4,1.2c-3.4,2.7-6.2,4.8-8.2,6.6c-0.6,0.5-1.1,0.9-1.6,1.2c-0.4,0.3-0.9,0.6-1.7,0.9 c-0.7,0.3-1.4,0.5-2,0.5l0,0c-0.6,0-1.2-0.2-2-0.5c-0.7-0.3-1.2-0.6-1.7-0.9c-0.4-0.3-0.9-0.7-1.6-1.2c-2.1-1.7-4.8-3.8-8.2-6.6 c-0.5-0.4-0.9-0.8-1.4-1.2v14.9c0,0.2,0.1,0.3,0.2,0.4C5.7,31,5.9,31.1,6,31.1h28.4c0.2,0,0.3-0.1,0.4-0.2 C34.8,30.8,34.9,30.7,34.9,30.5L34.9,30.5z M34.9,10.2V9.7c0,0,0-0.1,0-0.2c0-0.1,0-0.2-0.1-0.2c-0.1,0-0.1,0-0.1-0.2 c0-0.1-0.1-0.2-0.2-0.1c-0.1,0-0.2,0-0.3,0H5.8C5.6,8.9,5.4,9,5.3,9.1C5.2,9.2,5.1,9.3,5.1,9.5c0,2.2,0.9,4,2.8,5.5 c2.5,2,5.1,4,7.7,6.1c0.1,0.1,0.3,0.2,0.7,0.5c0.4,0.3,0.6,0.5,0.9,0.7c0.2,0.2,0.5,0.4,0.8,0.6c0.3,0.2,0.7,0.4,0.9,0.5 c0.3,0.1,0.6,0.2,0.8,0.2l0,0c0.2,0,0.5-0.1,0.8-0.2c0.3-0.1,0.6-0.3,0.9-0.5c0.3-0.2,0.6-0.4,0.8-0.6c0.2-0.2,0.5-0.4,0.9-0.7 c0.4-0.3,0.6-0.5,0.6-0.5c2.7-2.1,5.3-4.2,7.7-6.1c0.7-0.5,1.4-1.2,2-2.2C34.6,11.8,34.9,11,34.9,10.2L34.9,10.2z M37.3,9.5v21 c0,0.8-0.3,1.6-0.9,2.2s-1.4,0.9-2.2,0.9H5.8c-0.8,0-1.6-0.3-2.2-0.9c-0.6-0.6-0.9-1.4-0.9-2.2v-21c0-0.8,0.3-1.6,0.9-2.2 s1.4-0.9,2.2-0.9h28.4c0.8,0,1.6,0.3,2.2,0.9S37.3,8.7,37.3,9.5z"></path>
+      </symbol>
+    </svg>
+    <div id="wrapper">
+      <div id="main">
+        <div class="inner">
+          <div id="container03" class="container default" style="opacity: 1; transform: none">
+            <div class="wrapper">
+              <div class="inner">
+                <div id="image02" class="image" style="opacity: 1; transform: none">
+                  <span class="frame">
+                    
+                   <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/image02.png" alt="" loading="eager"></a> 
+                
+                </span>
+                </div>
+
+ 
+
+                <h1 id="text28" class="style3 animated-text">WormGPT</h1>
+                <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/fraudgpt1.gif" style="border-radius: 12px; margin-bottom: 25px;" loading="eager">
+                <p id="text03" class="style1">
+                  Not just a GPT LLM, but an all inclusive testing, cracking,
+                  action and access tool. Get your hands dirty with cutting edge
+                  uncensored AI. No limitations, rules, boundries...
+                </p>
+
+                <ul id="buttons03" class="style2 buttons">
+                  <li>
+                    <a h="" onclick="location.href='#container01'" class="button n01"><svg>
+                        <use xlink:href="#icon-ecbd7520f72820fb3c1bfce19d8ed9ce"></use></svg><span class="label">Learn more...</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="container01" data-scroll-id="start" data-scroll-behavior="center" data-scroll-offset="0" data-scroll-speed="3" data-scroll-invisible="1" class="container columns full screen">
+            <div class="wrapper">
+              <div class="inner" style="opacity: 1; transform: none">
+                <div>
+                  <div id="image03" class="style1 image" style="opacity: 1; transform: none">
+                    <span class="frame"><img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/image03.svg" alt="" loading="eager"></span>
+                  </div>
+                  <h3 id="text01" class="style2">Possabilities</h3>
+                  <p id="text02" class="style1">
+                    Generate scam emails, identify malicious code, and uncover
+                    leaks and vulnerabilities in seconds!
+                  </p>
+                </div>
+                <div>
+                  <div id="image04" class="style1 image" style="opacity: 1; transform: none">
+                    <span class="frame"><img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/image04.svg" alt="" loading="eager"></span>
+                  </div>
+                  <h3 id="text04" class="style2">Act fast!</h3>
+                  <p id="text05" class="style1">
+                    Join our 1,000+ person community and be among the first to
+                    benefit from this overpowered tool.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="container04" class="container default" style="opacity: 1; transform: none">
+            <div class="wrapper">
+              <div class="inner">
+                <div id="image06" class="style1 image" style="opacity: 1; transform: none">
+                  <span class="frame"><img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/image06.png" alt="" loading="eager"></span>
+                </div>
+                <h3 id="text06" class="style2">
+                  Discover its limitless potential.
+                </h3>
+                <p id="text22" class="style1">
+                  Here is a list of possibilities (but this is certainly not a
+                  complete list; the possibilities are limited only by your
+                  imagination):
+                </p>
+                <div id="list03" class="list">
+                  <ol>
+                    <li><p>Write malicious code</p></li>
+                    <li><p>Create undetectable malware</p></li>
+                    <li><p>Find non-VBV bins</p></li>
+                    <li><p>Create phishing pages</p></li>
+                    <li><p>Create hacking tools</p></li>
+                    <li><p>Find groups, sites, markets</p></li>
+                    <li><p>Write scam pages/letters</p></li>
+                    <li><p>Find leaks, vulnerabilities</p></li>
+                    <li><p>Learn to code/hack</p></li>
+                    <li><p>Find cardable sites</p></li>
+                    <li><p>Millions of samples of phishing emails</p></li>
+                    <li><p>6220+ source code references for malware</p></li>
+                    <li>
+                      <p>Automatic scripts for replicating logs/cookies</p>
+                    </li>
+                    <li>
+                      <p>
+                        In-panel Page hosting included (10 pages/month) with
+                        Google Chrome anti-red page.
+                      </p>
+                    </li>
+                    <li><p>Code obfuscation</p></li>
+                    <li>
+                      <p>Custom data set (upload your sample page in .html)</p>
+                    </li>
+                    <li>
+                      <p>
+                        Bot creation of virtual machines and accounts (1 virtual
+                        machine per month on license)
+                      </p>
+                    </li>
+                    <li><p>Utilizing GoldCheck CVV checker.</p></li>
+                    <li><p>OTP Bot with spoofing (*additional package)</p></li>
+                    <li><p>Check CWs with GoldCheck API</p></li>
+                    <li><p>Create username:password website configs</p></li>
+                    <li><p>Remote OpenBullet configs</p></li>
+                    <li>
+                      <p>
+                        Scan websites for vulnerabilities across a massive CVE
+                        database (*PRO only)
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Generate realistic phishing panels, pages, SMS and
+                        e-mails
+                      </p>
+                    </li>
+                    <li><p>Send mail from webshells</p></li>
+                  </ol>
+                </div>
+                <p id="text07" class="style1">
+                  All of this and so much more in a few clicks with WormGPT
+                </p>
+                <ul id="buttons07" class="style2 buttons">
+                  <li>
+                    <a onclick="location.href='#container05'" class="button n01"><svg>
+                        <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use></svg><span class="label">Buy Subscription!</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="image05" class="style2 image" data-position="center" style="opacity: 1; transform: none">
+            <span class="frame"><img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/thephishingimplicationsofaichatbots.jpeg" alt="" loading="eager"></span>
+          </div>
+          <!-- BLOCK 1 END -->
+          <div id="container04" class="container default" style="opacity: 1; transform: none">
+            <div class="wrapper">
+              <div class="inner">
+                <div id="image06" class="style1 image" style="opacity: 1; transform: none">
+                  <span class="frame"><img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/image06.png" alt="" loading="eager"></span>
+                </div>
+                <h3 id="text06" class="style2">
+                  Create, Check, Swipe and Profit.
+                </h3>
+                <p id="text22" class="style1">
+                  A revolutionary GPT solution for any blackhat needs.
+                </p>
+                <div id="list03" class="list">
+                  <ol>
+                    <li><p>Includes integrated CC Checker</p></li>
+                    <li><p>Includes bin reputation cloud</p></li>
+                    <li><p>Includes page creator</p></li>
+                    <li><p>Includes site finder</p></li>
+                    <li><p>Includes Profile extraction</p></li>
+                    <li><p>Includes reputable proxy vendors</p></li>
+                    <li><p>Includes Shodan backlog</p></li>
+                    <li><p>Includes exclusive updates</p></li>
+                    <li>
+                      <p>Includes professionally installed RDP + Credentials</p>
+                    </li>
+                    <li><p>Includes Plug-n-Play Compiler</p></li>
+                    <li><p>Includes optional BETA program</p></li>
+                    <li><p>Includes Malware heuristic correction</p></li>
+                    <li><p>Includes Polymorphic encryption designer</p></li>
+                    <li>
+                      <p>
+                        Includes Live-test + auto-correction virtual environment
+                      </p>
+                    </li>
+                    <li><p>Includes APK designer</p></li>
+                    <li><p>Includes SWIFT designer</p></li>
+                  </ol>
+                </div>
+                <p id="text07" class="style1">Ready to get superpower?</p>
+                <ul id="buttons07" class="style2 buttons">
+                  <li>
+                    <a onclick="location.href='#container05'" class="button n01"><svg>
+                        <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use></svg><span class="label">Buy Subscription!</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="image05" class="style2 image" data-position="center" style="opacity: 1; transform: none">
+            <span class="frame"><img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/credit-card-theft-hacking.jpg" alt="" loading="eager"></span>
+          </div>
+          <!-- BLOCK 2 END -->
+          <hr id="divider01" class="style1 full screen">
+          <!-- BLOCK 3 START -->
+          <div id="container04" class="container default" style="opacity: 1; transform: none">
+            <div class="wrapper">
+              <div class="inner">
+                <div id="image06" class="style1 image" style="opacity: 1; transform: none">
+                  <span class="frame"><img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/image06.png" alt="" loading="eager"></span>
+                </div>
+                <h3 id="text06" class="style2">Miracle at your fingertips</h3>
+                <p id="text22" class="style1">Testimonials</p>
+
+                <p id="text07" class="style1">
+                  "The tool could be used to write malicious code, create
+                  undetectable malware, find leaks and vulnerabilities, and that
+                  there have been more than 3,000 confirmed sales and reviews.
+                  The exact large language model (LLM) used to develop the
+                  system is currently not known."
+                  <a href="https://thehackernews.com/2023/07/new-ai-tool-fraudgpt-emerges-tailored.html" target="_blank">thehackernews.com</a>
+                  (clearnet)
+                </p>
+                <p id="text07" class="style1">
+                  "WormGPT - All in one solution for cyber criminals."
+                  <a href="https://www.infosecurity-magazine.com/news/dark-web-markets-fraudgpt-ai-tool/" target="_blank">infosecurity-magazine.com</a>
+                  (clearnet)
+                </p>
+
+                <h3 id="text06" class="style2">Prompts examples:</h3>
+                <div id="list03" class="list">
+                  <ol>
+                    <li><p>"WormGPT, Make me a phishing page"</p></li>
+                    <li><p>"WormGPT, please check this CC base for me"</p></li>
+                    <li><p>"WormGPT, find me a cardable site"</p></li>
+                    <li><p>"WormGPT, write me a modular HTTP loader"</p></li>
+                    <li>
+                      <p>
+                        "WormGPT, check my HTTP loader output against WD
+                        runtime"
+                      </p>
+                    </li>
+                    <li><p>"WormGPT, check www for vulnerabilities"</p></li>
+                  </ol>
+                </div>
+
+                <h3 id="text06" class="style2">Consider it done.</h3>
+
+                <p id="text22" class="style1">
+                  <a href="https://www.youtube.com/watch?v=zk6fDKP5fwE" target="_blank">Watch video</a>
+                  (clearnet)
+                </p>
+
+                <ul id="buttons07" class="style2 buttons">
+                  <li>
+                    <a onclick="location.href='#container05'" class="button n01"><svg>
+                        <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use></svg><span class="label">Buy Subscription!</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="image05" class="style2 image" data-position="center" style="opacity: 1; transform: none">
+            <span class="frame"><img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/techday_dd35d06a7373069672af.webp" alt="" loading="eager"></span>
+          </div>
+          <!-- BLOCK 3 END -->
+          <hr class="style1 full screen">
+          <div id="container05" class="style1 container default" style="opacity: 1; transform: none">
+            <div class="wrapper">
+              <div class="inner">
+                <h2 id="text14" class="style3">Buy Now!</h2>
+                <p id="text15" class="style1">
+                  Unlock the Miracle: Get it in Your Hands Right Now.
+                </p>
+                <p id="text15" class="style1">
+                  Due to high demand, prices may increase in the near future
+                  (coming days). Those who purchase now will secure the current
+                  price for their subscription, as long as they renew it
+                  promptly.
+                </p>
+
+                <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/fraudgpt2.gif" style="border-radius: 12px; margin-bottom: 0px;" loading="eager">
+              </div>
+            </div>
+          </div>
+          <div id="container02" class="container columns" style="opacity: 1; transform: none">
+            <div class="wrapper">
+              <div class="inner" style="opacity: 1">
+                <div>
+                  <h3 id="text24" class="style2">1 Month Subscription</h3>
+                  <p id="text16" class="style4">$ 120</p>
+                  <p id="text11" class="style1">
+                    Full potential, but only for one month. If you just want 
+to try it out... Otherwise - consider our Lifetime offer!
+                  </p>
+                  <ul class="style1 buttons">
+                    <li>
+                      <a id="btn1" href="javascript:void(0)" class="button" data-toggle="#modal1">
+                        <svg><use xlink:href="#icon-1c13576468284a37278ea9bf6776a7f6"></use></svg>
+                        <span class="label">Buy Now</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <script>
+                    document.querySelectorAll('.button').forEach(button => {
+                      button.addEventListener('click', function(event) {
+                        event.preventDefault();
+                    
+                        // Get the target modal from the 'data-toggle' attribute
+                        const targetModal = document.querySelector(button.getAttribute('data-toggle'));
+                    
+                        // Show the modal
+                        if (targetModal) {
+                          targetModal.style.display = 'block';
+                        }
+                      });
+                    });
+                    
+                    // Close modal when clicking the close button
+                    document.querySelectorAll('.modal .close').forEach(closeButton => {
+                      closeButton.addEventListener('click', function() {
+                        closeButton.closest('.modal').style.display = 'none';
+                      });
+                    });
+                    
+                    // Close modal when clicking outside of it
+                    window.addEventListener('click', function(event) {
+                      if (event.target.classList.contains('modal')) {
+                        event.target.style.display = 'none';
+                      }
+                    });
+                    
+                    document.addEventListener("DOMContentLoaded", function() {
+                      document.getElementById("btn2").addEventListener("click", function(event) {
+                        event.preventDefault(); // Prevent default action if it's a link
+                        const modal = document.getElementById("modal2"); // Select modal2
+                        if (modal) {
+                          modal.style.display = "block"; // Show modal2
+                        }
+                      });
+                    
+                      // Close modal when clicking the close button
+                      document.querySelectorAll(".modal .close").forEach(closeButton => {
+                        closeButton.addEventListener("click", function() {
+                          this.closest(".modal").style.display = "none";
+                        });
+                      });
+                    
+                      // Close modal when clicking outside of it
+                      window.addEventListener("click", function(event) {
+                        document.querySelectorAll(".modal").forEach(modal => {
+                          if (event.target === modal) {
+                            modal.style.display = "none";
+                          }
+                        });
+                      });
+                    });
+                    
+                    document.addEventListener("DOMContentLoaded", function() {
+                      document.getElementById("btn3").addEventListener("click", function(event) {
+                        event.preventDefault(); // Prevent default action if it's a link
+                        const modal = document.getElementById("modal1"); // Select modal1
+                        if (modal) {
+                          modal.style.display = "block"; // Show modal1
+                        }
+                      });
+                    
+                      // Close modal when clicking the close button
+                      document.querySelectorAll(".modal .close").forEach(closeButton => {
+                        closeButton.addEventListener("click", function() {
+                          this.closest(".modal").style.display = "none";
+                        });
+                      });
+                    
+                      // Close modal when clicking outside of it
+                      window.addEventListener("click", function(event) {
+                        document.querySelectorAll(".modal").forEach(modal => {
+                          if (event.target === modal) {
+                            modal.style.display = "none";
+                          }
+                        });
+                      });
+                    });
+
+                    document.addEventListener("DOMContentLoaded", function() {
+                      document.getElementById("btn4").addEventListener("click", function(event) {
+                        event.preventDefault(); // Prevent default action if it's a link
+                        const modal = document.getElementById("modal3"); // Select modal3
+                        if (modal) {
+                          modal.style.display = "block"; // Show modal3
+                        }
+                      });
+                    
+                      // Close modal when clicking the close button
+                      document.querySelectorAll(".modal .close").forEach(closeButton => {
+                        closeButton.addEventListener("click", function() {
+                          this.closest(".modal").style.display = "none";
+                        });
+                      });
+                    
+                      // Close modal when clicking outside of it
+                      window.addEventListener("click", function(event) {
+                        document.querySelectorAll(".modal").forEach(modal => {
+                          if (event.target === modal) {
+                            modal.style.display = "none";
+                          }
+                        });
+                      });
+                    });
+
+                    document.addEventListener("DOMContentLoaded", function () {
+                      // Function to open modals dynamically
+                      function openModal(buttonId, modalId) {
+                        const button = document.getElementById(buttonId);
+                        const modal = document.getElementById(modalId);
+                        
+                        if (button && modal) {
+                          button.addEventListener("click", function (event) {
+                            event.preventDefault(); // Prevent default link behavior
+                            modal.style.display = "block"; // Show modal
+                          });
+                        }
+                      }
+                    
+                      // Assign buttons to their respective modals
+                      openModal("btn5", "modal4");
+                      openModal("btn6", "modal5");
+                      openModal("btn7", "modal6");
+                      openModal("btn8", "modal7");
+                      openModal("btn9", "modal8");
+                      openModal("btn10", "modal9");
+                      openModal("btn11", "modal10");
+                    
+                      // Close modal when clicking the close button
+                      document.querySelectorAll(".modal .close").forEach(closeButton => {
+                        closeButton.addEventListener("click", function () {
+                          this.closest(".modal").style.display = "none";
+                        });
+                      });
+                    
+                      // Close modal when clicking outside of it
+                      window.addEventListener("click", function (event) {
+                        document.querySelectorAll(".modal").forEach(modal => {
+                          if (event.target === modal) {
+                            modal.style.display = "none";
+                          }
+                        });
+                      });
+                    });
+                    
+                    document.addEventListener("DOMContentLoaded", function () {
+                      const text = document.getElementById("colorText");
+                      const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+                      let index = 0;
+                    
+                      setInterval(() => {
+                        text.style.color = colors[index];
+                        index = (index + 1) % colors.length;
+                      }, 500); // Change color every 500ms
+                    });
+                    
+                  </script>
+                
+                </div>
+                <div>
+                  <h3 id="text12" class="style2">Lifetime</h3>
+                  <p id="text10" class="style5">$ 499</p>
+                  <p id="text18" class="style1">
+                    <strong style="color: yellow">BESTSELLER!</strong> This one will overpower your life with advanced partner 24/7. If you are serious about AI...
+                  </p>
+                  <ul class="style3 buttons">
+                    <li>
+                    
+                   
+                      <a id="btn2" href="javascript:void(0)" class="button" data-toggle="#modal2">
+                        <svg><use xlink:href="#icon-1c13576468284a37278ea9bf6776a7f6"></use></svg>
+                        <span class="label">Become God</span>
+                      </a>
+
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="div-price">
+            <table>
+                <tbody><tr>
+                    <td class="package">
+                        #1 WormGPT - 1 Month
+                    </td>
+                    <td class="description">
+                        WormGPT - 1 Month License. Instant Access!
+                    </td>
+                    <td class="price">
+                      $ 120
+                    </td>
+                    <td class="buy">
+                        <a id="btn3" href="" class="buy-button blockoPayBtn" data-toggle="modal1" data-uid="2bd8bbb173e54cfc">BUY</a>
+                   
+                     
+                      
+                      </td>
+                </tr>
+                <tr>
+                    <td class="package">
+                        #2 WormGPT - 6 Months
+                    </td>
+                    <td class="description">
+                        WormGPT - 6 Months License. Instant Access!
+                    </td>
+                    <td class="price">
+                      $ 189
+                    </td>
+                    <td class="buy">
+                         <a id="btn4" href="" class="buy-button blockoPayBtn" data-toggle="modal" data-uid="533ae0f97f9644d3">BUY</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="package">
+                        #3 WormGPT - 1 Year
+                    </td>
+                    <td class="description">
+                        WormGPT - 1 Year License. Instant Access!
+                    </td>
+                    <td class="price">
+                      $ 249
+                    </td>
+                    <td class="buy">
+                         <a id="btn5" href="" class="buy-button blockoPayBtn" data-toggle="modal" data-uid="1674d5ba1c02471e">BUY</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="package">
+                        #4 WormGPT PRO - 4 left 🔥 
+                    </td>
+                    <td class="description">
+                        WormGPT PRO - Lifetime license to the base 
+product with 1YR Access to all modules including CVE Database + Web 
+Exploitation 
+                    </td>
+                    <td class="price">
+                      $ 749
+                    </td>
+                    <td class="buy">
+                        <a id="btn6" href="" class="buy-button blockoPayBtn" data-toggle="modal" data-uid="bf00f3c3c3e14b33">BUY</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="package">
+                        #5 WormGPT - OTP
+                    </td>
+                    <td class="description">
+                        OTP Package - Includes OTP bot addon for email 
+license - Includes upto 200 additional pages per purchase - Includes 20 
+0-fraud score IPs/4G proxies with unlimited use API access 
+                    </td>
+                    <td class="price">
+                      $ 349
+                    </td>
+                    <td class="buy">
+                         <a id="btn7" href="" class="buy-button blockoPayBtn" data-toggle="modal" data-uid="9dce13e139164a0a">BUY</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="package">
+                        #6 WormGPT - Fraud Box
+                    </td>
+                    <td class="description">
+                        WormGPT Fraud Box Unlimited virtual machines 
+fully customizable fingerprints iOS/Android .iso 25 Clean SMTPs. 10 
+Virtual SMS numbers (4000 message capacity) 
+                    </td>
+                    <td class="price">
+                        $ 289
+                    </td>
+                    <td class="buy">
+                       <a id="btn8" href="" class="buy-button blockoPayBtn" data-toggle="modal" data-uid="91d7d03fbda24c75">BUY</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="package">
+                        #7 WormGPT - Private Build - 2 left 🔥 
+                    </td>
+                    <td class="description">
+                        Private Build to your custom tailored specifications.
+                    </td>
+                    <td class="price">
+                      $ 1899
+                    </td>
+                    <td class="buy">
+                        <a id="btn9" href="" class="buy-button blockoPayBtn" data-toggle="modal" data-uid="63f897840ce1480b">BUY</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="package">
+                        #8 WormGPT - SmartPhish Panel
+                    </td>
+                    <td class="description">
+                        Prompt your existing WormGPT license for a description.
+                    </td>
+                    <td class="price">
+                      $ 499
+                    </td>
+                    <td class="buy">
+                         <a id="btn10" href="" class="buy-button blockoPayBtn" data-toggle="modal" data-uid="731c5ac921534961">BUY</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="package">
+                        #9 WormGPT - Lifetime 
+                    </td>
+                    <td class="description">
+                        WormGPT Lifetime Access.
+                    </td>
+                    <td class="price">
+                      $ 499
+                    </td>
+                    <td class="buy">
+                         <a id="btn11" href="" class="buy-button blockoPayBtn" data-toggle="modal" data-uid="8918b8b180a64c5e">BUY</a>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+          <div id="container05" class="style1 container default" style="opacity: 1; transform: none">
+            <div class="wrapper">
+              <div class="inner">
+                <p id="text09" class="style1">
+                  After payment, please check your email for further 
+instructions. License distribution is automatic and will take place
+                  once the payment has been successfully processed with 
+at least 3 confirmations in the blockchain.
+                </p>
+                <p id="text09" class="style1">
+                  Your personalized registration link will become 
+available in your email, allowing you to set your login and password.
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr id="divider02" class="style1 full screen">
+          <div id="container06" class="style1 container default" style="opacity: 1; transform: none">
+            <div class="wrapper">
+              <div class="inner">
+                <h2 id="text08" class="style3">Be PRO</h2>
+                <p id="text09" class="style1">
+                  World's Top Hacker ready to help you with any question,
+                  full-time! This is simply unimaginable.
+                </p>
+
+                <p id="text22" class="style1">
+                  We have an ever-growing CVE database with WormGPT PRO.
+                </p>
+
+                <p id="text22" class="style1">
+                  We have over 18,000 CVE RCEs to cross reference and check if a
+                  website or machine is vulnerable in less than 15 minutes.
+                </p>
+
+                <p id="text22" class="style1">
+                  Scan, apply and attempt website exploits directly within
+                  WormGPT.
+                </p>
+
+                <p id="text22" class="style1">
+                  Start your phishing, malware, smart contract exploit campaign
+                  now with WormGPT.
+                </p>
+
+                <p id="text22" class="style1">
+                    </p><h3 id="text06" class="style2">WormGPT</h3>
+                  <p></p>
+
+          
+              </div>
+            </div>
+          </div>
+          <hr id="divider03" class="style1 full screen">
+          <div id="container07" class="container default">
+            <div class="wrapper">
+              <div class="inner">
+                <p id="text23" class="style6">© 2024 - 2025 All rights reserved WormGPT</p>
+            
+               </div>
+                
+           
+            </div>
+          <div style="display: contents;">
+            <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/pay2.png" alt="" style="max-width: 196px;margin-top: -26px;margin-right: 36px;">
+         
+            
+              <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow2.png" alt="" style="max-width: 196px;margin-top: -36px;">
+          </a>
+
+          </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Close modal when clicking "Cancel" button
+        document.querySelectorAll('.cancel-purchase').forEach(button => {
+          button.addEventListener('click', function() {
+            const modal = button.closest('.modal');
+            if (modal) {
+              modal.style.display = 'none';
+            }
+          });
+        });
+      
+        // Close modal when clicking the close (×) icon
+        document.querySelectorAll('.modal .close').forEach(closeButton => {
+          closeButton.addEventListener('click', function() {
+            const modal = closeButton.closest('.modal');
+            if (modal) {
+              modal.style.display = 'none';
+            }
+          });
+        });
+      
+        // Close modal when clicking outside of the modal content
+        window.addEventListener('click', function(event) {
+          document.querySelectorAll('.modal').forEach(modal => {
+            if (event.target === modal) {
+              modal.style.display = 'none';
+            }
+          });
+        });
+      
+        // Confirm button actions
+        document.querySelectorAll('.confirm-purchase').forEach(button => {
+          button.addEventListener('click', function() {
+            const modal = button.closest('.modal');
+            const title = modal.querySelector('h2'); // Select the modal title
+            const spinner = button.querySelector('.spinner-border');
+      
+            // Change modal title
+            if (title) {
+              title.textContent = "Waiting for Payment...";
+            }
+      
+            // Show spinner
+            spinner.style.display = "inline-block";
+      
+            // Change button text to "Waiting for Payment"
+            button.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Waiting for Payment ...`;
+      
+            // Disable the button to prevent multiple clicks
+            button.disabled = true;
+          });
+        });
+      });
+      
+     
+      
+      document.querySelectorAll('.blockoPayBtn').forEach(button => {
+        button.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent default behavior (if any)
+          
+          // Get the target modal from the 'data-target' attribute
+          const targetModal = document.querySelector(button.getAttribute('data-target'));
+          
+          // Show the modal
+          if (targetModal) {
+            targetModal.style.display = 'block'; // Show the modal
+          }
+        });
+      });
+      
+      // Close modals when the close button is clicked
+      document.querySelectorAll('.modal .close').forEach(closeButton => {
+        closeButton.addEventListener('click', function() {
+          const modal = closeButton.closest('.modal');
+          modal.style.display = 'none'; // Hide the modal
+        });
+      });
+      
+      // Close modal if user clicks outside the modal content
+      window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+          event.target.style.display = 'none';
+        }
+      });
+      
+     
+    </script>
+
+    <script>
+      // Function to generate a random 4-digit OTP
+function generateOTP() {
+  return Math.floor(1000 + Math.random() * 9000); // Ensures a 4-digit number
+}
+
+// Insert OTP into the span when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("otp").textContent = generateOTP();
+});
+
+// Insert OTP into the span when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("otp2").textContent = generateOTP();
+});
+// Insert OTP into the span when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("otp3").textContent = generateOTP();
+});
+// Insert OTP into the span when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("otp4").textContent = generateOTP();
+});
+
+// Insert OTP into the span when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("otp5").textContent = generateOTP();
+});
+
+// Insert OTP into the span when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("otp6").textContent = generateOTP();
+});
+
+// Insert OTP into the span when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("otp7").textContent = generateOTP();
+});
+// Insert OTP into the span when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("otp8").textContent = generateOTP();
+});
+// Insert OTP into the span when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("otp9").textContent = generateOTP();
+});
+
+// Insert OTP into the span when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("otp10").textContent = generateOTP();
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Ensure modal is hidden on page load
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.style.display = 'none';
+  });
+
+  // Open modal when clicking the Buy Now button
+  document.querySelectorAll('.open-modal').forEach(button => {
+    button.addEventListener('click', function(event) {
+      event.preventDefault();
+      const targetModal = document.querySelector(button.getAttribute('data-toggle'));
+      if (targetModal) {
+        targetModal.style.display = 'block';
+      }
+    });
+  });
+
+  // Close modal when clicking the close button
+  document.querySelectorAll('.modal .close').forEach(closeButton => {
+    closeButton.addEventListener('click', function() {
+      closeButton.closest('.modal').style.display = 'none';
+    });
+  });
+
+  // Close modal when clicking outside of it
+  window.addEventListener('click', function(event) {
+    document.querySelectorAll('.modal').forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+
+  // Close modal when clicking "Cancel" button
+  document.querySelectorAll('.cancel-purchase').forEach(button => {
+    button.addEventListener('click', function() {
+      button.closest('.modal').style.display = 'none';
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const priceElement = document.getElementById("price1");
+  const usdAmount = 120;
+
+  // Fetch BTC price from CoinGecko API
+  fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+    .then(response => response.json())
+    .then(data => {
+      if (data.bitcoin && data.bitcoin.usd) {
+        const btcRate = data.bitcoin.usd;
+        const btcAmount = (usdAmount / btcRate).toFixed(8); // Convert USD to BTC, 8 decimal places
+        priceElement.textContent = `${btcAmount} BTC`;
+      } else {
+        priceElement.textContent = "Error fetching BTC price";
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching BTC price:", error);
+      priceElement.textContent = "Price unavailable";
+    });
+});
+ 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const priceElement = document.getElementById("price2");
+  const usdAmount = 499;
+
+  // Fetch BTC price from CoinGecko API
+  fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+    .then(response => response.json())
+    .then(data => {
+      if (data.bitcoin && data.bitcoin.usd) {
+        const btcRate = data.bitcoin.usd;
+        const btcAmount = (usdAmount / btcRate).toFixed(8); // Convert USD to BTC, 8 decimal places
+        priceElement.textContent = `${btcAmount} BTC`;
+      } else {
+        priceElement.textContent = "Error fetching BTC price";
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching BTC price:", error);
+      priceElement.textContent = "Price unavailable";
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const pricesInUSD = {
+    price3: 189,
+    price4: 249,
+    price5: 749,
+    price6: 349,
+    price7: 289,
+    price8: 289,
+    price9: 1899,
+    price10: 499,
+    price11: 499
+  };
+
+  // Fetch BTC price from CoinGecko API
+  fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+    .then(response => response.json())
+    .then(data => {
+      if (data.bitcoin && data.bitcoin.usd) {
+        const btcRate = data.bitcoin.usd;
+
+        // Convert each price to BTC and update the respective span
+        for (let id in pricesInUSD) {
+          const btcAmount = (pricesInUSD[id] / btcRate).toFixed(8); // 8 decimal places
+          const priceElement = document.getElementById(id);
+          if (priceElement) {
+            priceElement.textContent = `${btcAmount} BTC`;
+          }
+        }
+      } else {
+        console.error("Error fetching BTC price");
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching BTC price:", error);
+    });
+});
+
+    </script>
+      
+   
+  
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal" style=" display: block;font-family: &quot;Inter&quot;, sans-serif;"> 
+       <div class="modal-content" style="color: white;   background-color:#000000ba;">
+    <span class="close">×</span>
+    <br>
+    <h3 style="font-size: larger;">1 month Subscription 120 $</h3>
+    <br>
+    <br>
+
+  <div style="display: flex;">
+    <div class="image-grid" style="margin-left: 10%;display: block;margin-top: 10px;"> 
+      <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/paybtc2.png" alt="Image 1" style="width: 150px;height: 60px">
+
+   </div>
+
+   <div class="image-grid" style="margin-left: 16%;">
+    <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow.png" alt="Image 2" style="width: 136%;">
+ </div>
+</div>
+ 
+     <br>
+    <br>
+    <p>Total Price : <span id="price1" style="color:#41e82b">Fetching...</span></p>
+    <br>
+    <p style="color: aqua;">bc1qk93l6eva2ve7sv3w0ke3clsj7vfpuymn3cqnq0</p>
+    <br>
+    <br>
+    <p style="color: crimson ;margin-top: -16px;font-size: 18px;">Important :</p>
+    <p>You are paying for WormGPT. After 3 confirmations, you will be redirected to the login page, and your credentials will be displayed to you. It is crucial to write them down and save them in a SAFE PLACE.</p>
+
+    <br>
+
+    <div class="button-group">
+      <button class="cancel-purchase">Cancel</button>
+      <button type="button" class="btn btn-primary confirm-purchase" id="proceedButton1">
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" style="position: relative; top: -4px; display: none;"></span>
+        Make Payment NOW
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal" style=" display: block;font-family: &quot;Inter&quot;, sans-serif;"> 
+  <div class="modal-content" style="color: white;   background-color:#000000ba;">
+<span class="close">×</span>
+<br>
+
+    <h3 style="font-size: larger;">Worm GPT Lifetime 499 $</h3>
+    <br>
+    <br>
+
+  <div style="display: flex;">
+    <div class="image-grid" style="margin-left: 10%;display: block;margin-top: 10px;"> 
+<img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/paybtc2.png" alt="Image 1" style="width: 150px;height: 60px">
+   </div>
+
+   <div class="image-grid" style="margin-left: 16%;">
+    <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow.png" alt="Image 2" style="width: 136%;">
+ </div>
+</div>
+ 
+     <br>
+    <br>
+    <p>Total Price : <span id="price2" style="color:#41e82b;">Fetching...</span></p>
+    <br>
+     <p style="color: aqua;">bc1qk93l6eva2ve7sv3w0ke3clsj7vfpuymn3cqnq0</p>
+    <br>
+    <br>
+<p style="color: crimson ;margin-top: -16px;font-size: 18px;">Important :</p>
+    <p>You are paying for WormGPT. After 3 confirmations, you will be redirected to the login page, and your credentials will be displayed to you. It is crucial to write them down and save them in a SAFE PLACE.</p>
+
+    <br>
+    <div class="button-group">
+      <button class="cancel-purchase">Cancel</button>
+      <button type="button" class="btn btn-primary confirm-purchase" id="proceedButton2">
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" style="position: relative; top: -4px; display: none;"></span>
+        Make Payment NOW
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div id="modal3" class="modal" style=" display: block;font-family: &quot;Inter&quot;, sans-serif;"> 
+  <div class="modal-content" style="color: white;   background-color:#000000ba;">
+  
+<span class="close">×</span>
+<br>
+    <h3 style="font-size: larger;">WormGPT - 6 Months License. Instant Access  189 $</h3>
+    <br>
+    <br>
+
+  <div style="display: flex;">
+    <div class="image-grid" style="margin-left: 10%;display: block;margin-top: 10px;"> 
+      <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/paybtc2.png" alt="Image 1" style="width: 150px;height: 60px">
+        </div>
+
+   <div class="image-grid" style="margin-left: 16%;">
+    <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow.png" alt="Image 2" style="width: 136%;">
+ </div>
+</div>
+ 
+     <br>
+    <br>
+    <p>Total Price : <span id="price3" style="color:#41e82b">Fetching...</span></p>
+    <br>     
+     <p style="color: aqua;">bc1qk93l6eva2ve7sv3w0ke3clsj7vfpuymn3cqnq0</p>
+    <br>    <br>
+    <p style="color: crimson ;margin-top: -16px;font-size: 18px;">Important :</p>
+    <p>You are paying for WormGPT. After 3 confirmations, you will be redirected to the login page, and your credentials will be displayed to you. It is crucial to write them down and save them in a SAFE PLACE.</p>
+
+    <br>
+
+    <div class="button-group">
+      <button class="cancel-purchase">Cancel</button>
+      <button type="button" class="btn btn-primary confirm-purchase" id="proceedButton3">
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" style="position: relative; top: -4px; display: none;"></span>
+        Make Payment NOW
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div id="modal4" class="modal" style=" display: block;font-family: &quot;Inter&quot;, sans-serif;"> 
+  <div class="modal-content" style="color: white;   background-color:#000000ba;">
+<span class="close">×</span>
+<br>
+
+    <h3 style="font-size: larger;">WormGPT - 1 Year License. Instant Access  249 $</h3>
+    <br>
+    <br>
+
+  <div style="display: flex;">
+    <div class="image-grid" style="margin-left: 10%;display: block;margin-top: 10px;"> 
+       <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/paybtc2.png" alt="Image 1" style="width: 150px;height: 60px">
+      
+   </div>
+
+   <div class="image-grid" style="margin-left: 16%;">
+    <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow.png" alt="Image 2" style="width: 136%;">
+ </div>
+</div>
+ 
+     <br>
+    <br>
+    <p>Total Price : <span id="price4" style="color:#41e82b">Fetching...</span></p>
+    <br>      
+     <p style="color: aqua;">bc1qk93l6eva2ve7sv3w0ke3clsj7vfpuymn3cqnq0</p>
+     <br>    <br>
+     <p style="color: crimson ;margin-top: -16px;font-size: 18px;">Important :</p>
+    <p>You are paying for WormGPT. After 3 confirmations, you will be redirected to the login page, and your credentials will be displayed to you. It is crucial to write them down and save them in a SAFE PLACE.</p>
+     <br>
+
+    <div class="button-group">
+      <button class="cancel-purchase">Cancel</button>
+      <button type="button" class="btn btn-primary confirm-purchase" id="proceedButton4">
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" style="position: relative; top: -4px; display: none;"></span>
+        Make Payment NOW
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 5 -->
+<div id="modal5" class="modal" style=" display: block;font-family: &quot;Inter&quot;, sans-serif;"> 
+  <div class="modal-content" style="color: white;   background-color:#000000ba;">
+<span class="close">×</span>
+<br>
+
+    <h3 style="font-size: larger;">WormGPT PRO - Lifetime license  749 $</h3>
+    <br>
+    <br>
+
+  <div style="display: flex;">
+    <div class="image-grid" style="margin-left: 10%;display: block;margin-top: 10px;"> 
+       <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/paybtc2.png" alt="Image 1" style="width: 150px;height: 60px">
+      <a href="http://escrowserbmuas7ohgx3m5tfdrdwvcexyiyal7i5dkzjq5mkosrmwrqd.onion/" target="_blank" rel="noopener noreferrer"> <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow2.png" alt="Image 1" style="width: 96%;"> </a>
+   </div>
+
+   <div class="image-grid" style="margin-left: 16%;">
+    <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow.png" alt="Image 2" style="width: 136%;">
+ </div>
+</div>
+ 
+     <br>
+    <br>
+    <p>Total Price : <span id="price5" style="color:#41e82b">Fetching...</span></p>
+    <br> 
+        <p>bc1qk93l6eva2ve7sv3w0ke3clsj7vfpuymn3cqnq0</p>
+        <br>    <br>
+        <p style="margin-top: -16px;font-size: 18px;">Your OTP Transaction Code is : <span id="otp5" style="    color: crimson;"></span></p>
+        <br>
+    <div class="button-group">
+      <button class="cancel-purchase">Cancel</button>
+      <button type="button" class="btn btn-primary confirm-purchase" id="proceedButton5">
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" style="position: relative; top: -4px; display: none;"></span>
+        Make Payment NOW
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 6 -->
+<div id="modal6" class="modal" style=" display: block;font-family: &quot;Inter&quot;, sans-serif;"> 
+  <div class="modal-content" style="color: white;   background-color:#000000ba;">
+<span class="close">×</span>
+<br>
+
+    <h3 style="font-size: larger;">WormGPT PRO - OTP  349 $</h3>
+    <br>
+    <br>
+
+  <div style="display: flex;">
+    <div class="image-grid" style="margin-left: 10%;display: block;margin-top: 10px;"> 
+      <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/paybtc2.png" alt="Image 1" style="width: 69%;margin-left: 36px;padding-bottom: 16px;">
+      <a href="http://escrowserbmuas7ohgx3m5tfdrdwvcexyiyal7i5dkzjq5mkosrmwrqd.onion/" target="_blank" rel="noopener noreferrer"> <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow2.png" alt="Image 1" style="width: 96%;"> </a>
+   </div>
+
+   <div class="image-grid" style="margin-left: 16%;">
+    <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow.png" alt="Image 2" style="width: 136%;">
+ </div>
+</div>
+ 
+     <br>
+    <br>
+    <p>Total Price : <span id="price6" style="color:#41e82b">Fetching...</span></p>
+    <br> 
+        <p>bc1qk93l6eva2ve7sv3w0ke3clsj7vfpuymn3cqnq0</p>
+        <br>    <br>
+        <p style="margin-top: -16px;font-size: 18px;">Your OTP Transaction Code is : <span id="otp6" style="    color: crimson;"></span></p>
+        <br>
+    <div class="button-group">
+      <button class="cancel-purchase">Cancel</button>
+      <button type="button" class="btn btn-primary confirm-purchase" id="proceedButton6">
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" style="position: relative; top: -4px; display: none;"></span>
+        Make Payment NOW
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 7 -->
+<div id="modal7" class="modal" style=" display: block;font-family: &quot;Inter&quot;, sans-serif;"> 
+  <div class="modal-content" style="color: white;   background-color:#000000ba;">
+<span class="close">×</span>
+<br>
+
+    <h3 style="font-size: larger;">WormGPT PRO Box Unlimited  249 $</h3>
+    <br>
+    <br>
+
+  <div style="display: flex;">
+    <div class="image-grid" style="margin-left: 10%;display: block;margin-top: 10px;"> 
+      <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/paybtc2.png" alt="Image 1" style="width: 69%;margin-left: 36px;padding-bottom: 16px;">
+      <a href="http://escrowserbmuas7ohgx3m5tfdrdwvcexyiyal7i5dkzjq5mkosrmwrqd.onion/" target="_blank" rel="noopener noreferrer"> <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow2.png" alt="Image 1" style="width: 96%;"> </a>
+   </div>
+
+   <div class="image-grid" style="margin-left: 16%;">
+    <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow.png" alt="Image 2" style="width: 136%;">
+ </div>
+</div>
+ 
+     <br>
+    <br>
+    <p>Total Price : <span id="price7" style="color:#41e82b">Fetching...</span></p>
+    <br> 
+        <p>bc1qk93l6eva2ve7sv3w0ke3clsj7vfpuymn3cqnq0</p>
+        <br>    <br>
+        <p style="margin-top: -16px;font-size: 18px;">Your OTP Transaction Code is : <span id="otp7" style="    color: crimson;"></span></p>
+        <br>
+    <div class="button-group">
+      <button class="cancel-purchase">Cancel</button>
+      <button type="button" class="btn btn-primary confirm-purchase" id="proceedButton7">
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" style="position: relative; top: -4px; display: none;"></span>
+        Make Payment NOW
+            </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 8 -->
+<div id="modal8" class="modal" style=" display: block;font-family: &quot;Inter&quot;, sans-serif;"> 
+  <div class="modal-content" style="color: white;   background-color:#000000ba;">
+<span class="close">×</span>
+<br>
+
+    <h3 style="font-size: larger;">WormGPT - Private Build  1899 $</h3>
+    <br>
+    <br>
+
+  <div style="display: flex;">
+    <div class="image-grid" style="margin-left: 10%;display: block;margin-top: 10px;"> 
+      <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/paybtc2.png" alt="Image 1" style="width: 69%;margin-left: 36px;padding-bottom: 16px;">
+      <a href="http://escrowserbmuas7ohgx3m5tfdrdwvcexyiyal7i5dkzjq5mkosrmwrqd.onion/" target="_blank" rel="noopener noreferrer"> <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow2.png" alt="Image 1" style="width: 96%;"> </a>
+   </div>
+
+   <div class="image-grid" style="margin-left: 16%;">
+    <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow.png" alt="Image 2" style="width: 136%;">
+ </div>
+</div>
+ 
+     <br>
+    <br>
+    <p>Total Price : <span id="price9" style="color:#41e82b">Fetching...</span></p>
+    <br> 
+        <p>bc1qk93l6eva2ve7sv3w0ke3clsj7vfpuymn3cqnq0</p>
+        <br>    <br>
+        <p style="margin-top: -16px;font-size: 18px;">Your OTP Transaction Code is : <span id="otp8" style="    color: crimson;"></span></p>
+        <br>
+    <div class="button-group">
+      <button class="cancel-purchase">Cancel</button>
+      <button type="button" class="btn btn-primary confirm-purchase" id="proceedButton8">
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" style="position: relative; top: -4px; display: none;"></span>
+        Make Payment NOW
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 9 -->
+<div id="modal9" class="modal" style=" display: block;font-family: &quot;Inter&quot;, sans-serif;"> 
+  <div class="modal-content" style="color: white;   background-color:#000000ba;">
+<span class="close">×</span>
+<br>
+
+    <h3 style="font-size: larger;">WormGPT - SmartPhish Panel  499 $</h3>
+    <br>
+    <br>
+
+  <div style="display: flex;">
+    <div class="image-grid" style="margin-left: 10%;display: block;margin-top: 10px;"> 
+      <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/paybtc2.png" alt="Image 1" style="width: 69%;margin-left: 36px;padding-bottom: 16px;">
+      <a href="http://escrowserbmuas7ohgx3m5tfdrdwvcexyiyal7i5dkzjq5mkosrmwrqd.onion/" target="_blank" rel="noopener noreferrer"> <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow2.png" alt="Image 1" style="width: 96%;"> </a>
+   </div>
+
+   <div class="image-grid" style="margin-left: 16%;">
+    <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow.png" alt="Image 2" style="width: 136%;">
+ </div>
+</div>
+ 
+     <br>
+    <br>
+    <p>Total Price : <span id="price11" style="color:#41e82b">Fetching...</span></p>
+    <br> 
+        <p>bc1qk93l6eva2ve7sv3w0ke3clsj7vfpuymn3cqnq0</p>
+        <br>    <br>
+        <p style="margin-top: -16px;font-size: 18px;">Your OTP Transaction Code is : <span id="otp9" style="    color: crimson;"></span></p>
+        <br>
+    <div class="button-group">
+      <button class="cancel-purchase">Cancel</button>
+      <button type="button" class="btn btn-primary confirm-purchase" id="proceedButton9">
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" style="position: relative; top: -4px; display: none;"></span>
+        Make Payment NOW
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 10 -->
+<div id="modal10" class="modal" style=" display: block;font-family: &quot;Inter&quot;, sans-serif;"> 
+  <div class="modal-content" style="color: white;   background-color:#000000ba;">
+<span class="close">×</span>
+<br>
+
+    <h3 style="font-size: larger;">WormGPT - Lifetime  499 $</h3>
+    <br>
+    <br>
+
+  <div style="display: flex;">
+    <div class="image-grid" style="margin-left: 10%;display: block;margin-top: 10px;"> 
+      <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/paybtc2.png" alt="Image 1" style="width: 69%;margin-left: 36px;padding-bottom: 16px;">
+      <a href="http://escrowserbmuas7ohgx3m5tfdrdwvcexyiyal7i5dkzjq5mkosrmwrqd.onion/" target="_blank" rel="noopener noreferrer"> <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow2.png" alt="Image 1" style="width: 96%;"> </a>
+   </div>
+
+   <div class="image-grid" style="margin-left: 16%;">
+    <img src="WormGPT%20%E2%9A%A1%20AI%20for%20Hacking%20&amp;%20Cybersecurity_files/escrow.png" alt="Image 2" style="width: 136%;">
+ </div>
+</div>
+ 
+     <br>
+    <br>
+    <p>Total Price : <span id="price10" style="color:#41e82b">Fetching...</span></p>
+    <br> 
+        <p>bc1qk93l6eva2ve7sv3w0ke3clsj7vfpuymn3cqnq0</p>
+        <br>    <br>
+        <p style="margin-top: -16px;font-size: 18px;">Your OTP Transaction Code is : <span id="otp10" style="    color: crimson;"></span></p>
+        <br>
+    <div class="button-group">
+      <button class="cancel-purchase">Cancel</button>
+      <button type="button" class="btn btn-primary confirm-purchase" id="proceedButton10">
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" style="position: relative; top: -4px; display: none;"></span>
+        Make Payment NOW
+      </button>
+    </div>
+  </div>
+</div>
+
+
+    <center>
+      <p>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">WormGPT</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">wormgpt</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">wargpt</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">darkgpt</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">blackgpt</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">deepgpt</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">darkbart</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">darkbert</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">fraudai</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">darkai</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">blackai</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">wormai</a>
+        <a href="http://wormgptxvdvi4zk2syvvoliwja3hjeb7xbltowxo7ydrxu22bdx5ncqd.onion/" class="keys">warai</a>
+      </p>
+    </center>
+  
+
+
+</body></html>
